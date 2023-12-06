@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as v;
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: v.$spaceThick;
+    .container {
+        width: v.$blogWidth;
+        h2 {
+            border-bottom: 3px solid v.$primary;
+            padding-bottom: v.$spaceUltraThin;
+            margin-top: v.$spaceRegular;
+        }
+    }
+}
+

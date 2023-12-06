@@ -1,0 +1,60 @@
+@use '../abstracts/variables' as v;
+.box-one {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    min-width: 200px;
+    min-height: 200px;
+    color: v.$charcoal;
+    
+    margin-block: v.$spaceRegular;
+    .box-container {
+        display: inherit;
+        flex-direction: inherit;
+        align-items: inherit;
+        gap: v.$spaceRegular;
+        background-color: v.$white;
+        padding: v.$spaceMedium v.$spaceThick;
+        width: 100%;
+    }
+
+    &::before, &::after {
+        content: '';
+        display: flex;
+        height: v.$spaceRegular;
+        background: v.$linearGradient01_inv;
+        width: 50%;
+        position: relative;
+    }
+
+    &::before {
+        margin-left: auto;
+    }
+
+    &::after {
+        margin-right: auto;
+    }
+
+}
+
+.box-two {
+    &::before, &::after {
+        content: '';
+        display: flex;
+        height: v.$spaceRegular;
+        background: v.$linearGradient01_inv;
+        width: 50%;
+        position: relative;
+    }
+
+    &::before {
+        margin-right: auto;
+    }
+
+    &::after {
+        margin-left: auto;
+    }
+
+}

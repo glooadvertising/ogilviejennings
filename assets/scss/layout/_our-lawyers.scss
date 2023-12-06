@@ -1,0 +1,6 @@
+@use '../abstracts/variables' as v;
+
+.our-lawyers {
+    background-color: v.$light;
+    padding-block: v.$spaceThick;
+}

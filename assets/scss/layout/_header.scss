@@ -1,0 +1,23 @@
+@use '../abstracts/variables' as v;
+
+.main-header {
+    background-color: v.$white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: v.$spaceThin;
+
+    .menu {
+        display: inline-flex;
+        list-style: none;
+        text-transform: uppercase;
+        padding-inline-start: 0;
+        font-size: 0.8rem;
+        gap: v.$spaceRegular;
+
+        li:hover a,  li.current-menu-item a {
+            color: v.$primary;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as v;
+
+.lawyer-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: v.$spaceMedium;
+
+    .col-left {
+        width: 34%;
+    }
+
+    .col-right {
+        width: 66%;
+        h2 {
+            margin-top: 0;
+        }
+    }
+
+    .additional-info_row {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: v.$spaceRegular;
+        padding-block: v.$spaceRegular;
+        border-bottom: 2px solid v.$primary;
+        font-size: 0.8rem;
+        &:last-child {
+            border-bottom: 0;
+        }
+        .content {
+            width: 70%;
+            span.aop:not(:last-child) a::after {
+                content: ' | '
+            }
+        }
+    }
+}

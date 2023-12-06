@@ -1,0 +1,35 @@
+@use '../util/fonts' as v;
+
+// COLOURS
+$primary: #EE3223;
+$secondary: #FAA21B;
+$charcoal: #5F6062;
+$light: #F2F2F2;
+$grey: #D6CDCD;
+$black: #000000;
+$white: #ffffff;
+
+// GRADIENTS
+$linearGradient01: linear-gradient(90deg, $primary 0%, $secondary 100%);
+$linearGradient01_inv: linear-gradient(90deg, $secondary 0%, $primary 100%);
+
+// FONTS
+$display: 'Poppins', sans-serif;
+$paragraph: 'Poppins', sans-serif;
+
+$thin: 100;
+$regular: 300;
+$medium: 400;
+$semiBold: 600;
+// SPACING
+$fullWidth: 100%;
+$pageWidth: 1440px;
+$blogWidth: 980px;
+
+$spaceBase: 1rem;
+$spaceUltraThin: calc($spaceBase / 2);
+$spaceThin: $spaceBase;
+$spaceRegular: calc($spaceBase * 2);
+$spaceMedium: calc($spaceRegular * 2);
+$spaceThick: calc($spaceMedium * 2);
+$spaceUltraThick: calc($spaceThick * 2);

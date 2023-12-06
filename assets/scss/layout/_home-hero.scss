@@ -1,0 +1,8 @@
+@use '../abstracts/variables' as v;
+
+.home-hero {
+    background-color: v.$light;
+    display: flex;
+    flex-direction: row;
+    padding-block: v.$spaceThick;
+}

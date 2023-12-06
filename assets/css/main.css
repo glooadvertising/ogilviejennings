@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #5F6062;
+  font-family: "Poppins", sans-serif;
+  font-weight: #F2F2F2;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  width: 1440px;
+  max-width: 100%;
+  padding-inline: 2rem;
+  margin-inline: auto;
+}
+
+.invisible-text {
+  display: none;
+}
+
+.btn {
+  display: inline-flex;
+  background-color: #ffffff;
+  padding: 1rem 4rem;
+  color: #EE3223;
+  border: 2px solid;
+}
+
+.box-one {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  min-width: 200px;
+  min-height: 200px;
+  color: #5F6062;
+  margin-block: 2rem;
+}
+.box-one .box-container {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  gap: 2rem;
+  background-color: #ffffff;
+  padding: 4rem 8rem;
+  width: 100%;
+}
+.box-one::before, .box-one::after {
+  content: "";
+  display: flex;
+  height: 2rem;
+  background: linear-gradient(90deg, #FAA21B 0%, #EE3223 100%);
+  width: 50%;
+  position: relative;
+}
+.box-one::before {
+  margin-left: auto;
+}
+.box-one::after {
+  margin-right: auto;
+}
+
+.box-two::before, .box-two::after {
+  content: "";
+  display: flex;
+  height: 2rem;
+  background: linear-gradient(90deg, #FAA21B 0%, #EE3223 100%);
+  width: 50%;
+  position: relative;
+}
+.box-two::before {
+  margin-right: auto;
+}
+.box-two::after {
+  margin-left: auto;
+}
+
+.home-hero {
+  background-color: #F2F2F2;
+  display: flex;
+  flex-direction: row;
+  padding-block: 8rem;
+}
+
+.page-hero {
+  background-color: #F2F2F2;
+  display: flex;
+  aspect-ratio: 3/1;
+  position: relative;
+}
+
+.page-heading .container {
+  width: 980px;
+  margin-block: 2rem;
+}
+.page-heading::before {
+  content: "";
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, #FAA21B 0%, #EE3223 100%);
+  height: 2rem;
+  width: calc(100% - (100% - 1440px) / 2);
+  max-width: 90%;
+  margin-left: auto;
+}
+.page-heading::after {
+  content: "";
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, #FAA21B 0%, #EE3223 100%);
+  height: 2rem;
+  width: calc((100% - 1440px) / 2);
+  max-width: 90%;
+  margin-right: auto;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8rem;
+}
+.page-content .container {
+  width: 980px;
+}
+.page-content .container h2 {
+  border-bottom: 3px solid #EE3223;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.main-header {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+.main-header .menu {
+  display: inline-flex;
+  list-style: none;
+  text-transform: uppercase;
+  padding-inline-start: 0;
+  font-size: 0.8rem;
+  gap: 2rem;
+}
+.main-header .menu li:hover a, .main-header .menu li.current-menu-item a {
+  color: #EE3223;
+}
+
+.main-footer {
+  background-color: #F2F2F2;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-block: 4rem;
+  gap: 4rem;
+  font-size: 0.8rem;
+}
+.main-footer .container .col {
+  width: 50%;
+  display: flex;
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+}
+.main-footer .container .col ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+.main-footer .container .col ul li {
+  padding-block-end: 0.5rem;
+}
+.main-footer .container .col-one {
+  flex-direction: column;
+}
+.main-footer .container .col-two {
+  display: flex;
+  flex-direction: rows;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.sub-footer {
+  background-color: #D6CDCD;
+  color: #5F6062;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding-block: 1rem;
+  font-size: 0.8rem;
+}
+.sub-footer span {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.sub-footer span:first-child {
+  gap: 1rem;
+}
+.sub-footer span:last-child {
+  gap: 0.5ch;
+}
+.sub-footer .container {
+  gap: inherit;
+}
+
+.lawyer-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 4rem;
+}
+.lawyer-card .col-left {
+  width: 34%;
+}
+.lawyer-card .col-right {
+  width: 66%;
+}
+.lawyer-card .col-right h2 {
+  margin-top: 0;
+}
+.lawyer-card .additional-info_row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-block: 2rem;
+  border-bottom: 2px solid #EE3223;
+  font-size: 0.8rem;
+}
+.lawyer-card .additional-info_row:last-child {
+  border-bottom: 0;
+}
+.lawyer-card .additional-info_row .content {
+  width: 70%;
+}
+.lawyer-card .additional-info_row .content span.aop:not(:last-child) a::after {
+  content: " | ";
+}
+
+.our-lawyers {
+  background-color: #F2F2F2;
+  padding-block: 8rem;
+}/*# sourceMappingURL=main.css.map */

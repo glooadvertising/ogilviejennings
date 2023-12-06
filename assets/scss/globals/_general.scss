@@ -1,0 +1,30 @@
+@use '../abstracts/variables' as v;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: v.$white;
+    color: v.$charcoal;
+    font-family: v.$paragraph;
+    font-weight: v.$light;
+
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    display: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    width: v.$pageWidth;
+    max-width: 100%;
+    padding-inline: v.$spaceRegular;
+    margin-inline: auto;
+}
+
+.invisible-text {
+    display: none;
+}

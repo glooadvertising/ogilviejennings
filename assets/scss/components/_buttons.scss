@@ -1,0 +1,9 @@
+@use '../abstracts/variables' as v;
+
+.btn {
+    display: inline-flex;
+    background-color: v.$white;
+    padding: v.$spaceThin v.$spaceMedium;
+    color: v.$primary;
+    border: 2px solid;
+}

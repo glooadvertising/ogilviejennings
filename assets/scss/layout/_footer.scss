@@ -1,0 +1,67 @@
+@use '../abstracts/variables' as v;
+
+.main-footer {
+    background-color: v.$light;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-block: v.$spaceMedium;
+    gap: v.$spaceMedium;
+    font-size: 0.8rem;
+
+    .container {
+        .col {
+            width: 50%;
+            display: flex;
+            column-gap: v.$spaceMedium;
+            ul {
+                list-style: none;
+                padding-inline-start: 0;
+                li {
+                    padding-block-end: v.$spaceUltraThin;
+                }
+            }
+        }
+
+        .col-one {
+            flex-direction: column;
+        }
+
+        .col-two {
+            display: flex;
+            flex-direction: rows;
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+    }
+    
+}
+
+.sub-footer {
+    background-color: v.$grey;
+    color: v.$charcoal;
+    display: flex;
+    flex-direction: row;
+    gap: v.$spaceRegular;
+    align-items: center;
+    justify-content: center;
+    padding-block: v.$spaceThin;
+    font-size: 0.8rem;
+
+    span {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        &:first-child {
+            gap: v.$spaceThin;
+        }
+        &:last-child {
+            gap: 0.5ch;
+        }
+    }
+
+    .container {
+        gap: inherit;
+    }
+}
