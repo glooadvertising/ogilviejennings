@@ -10,6 +10,11 @@
     gap: v.$spaceMedium;
     font-size: 0.8rem;
 
+    @media screen and (max-width: 780px) {
+        flex-direction: column;
+    }
+
+
     .container {
         .col {
             width: 50%;
@@ -22,6 +27,7 @@
                     padding-block-end: v.$spaceUltraThin;
                 }
             }
+
         }
 
         .col-one {
@@ -33,6 +39,16 @@
             flex-direction: rows;
             align-items: flex-start;
             justify-content: flex-end;
+
+            @media screen and (max-width: 780px) {
+                flex-direction: column;
+                gap: v.$spaceRegular;
+            }
+
+        }
+
+        @media screen and (max-width: 780px) {
+            gap: v.$spaceRegular;
         }
     }
     
@@ -48,6 +64,11 @@
     justify-content: center;
     padding-block: v.$spaceThin;
     font-size: 0.8rem;
+
+    @media screen and (max-width: 780px) {
+        flex-direction: column;
+        gap: v.$spaceThin;
+    }
 
     span {
         display: flex;

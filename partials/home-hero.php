@@ -1,4 +1,4 @@
-<section class="home-hero">
+<section class="home-hero" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/hero.jpg');">
     <div class="container">
         <div class="box-one">
             <div class="box-container">

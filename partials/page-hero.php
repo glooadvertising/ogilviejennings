@@ -1,4 +1,4 @@
-<section class="page-hero">
+<section class="page-hero" style="background-image: url('<?php echo get_the_post_thumbnail(); ?>');">
     <div class="container">
     </div>
 </section>

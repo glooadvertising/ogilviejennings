@@ -16,8 +16,16 @@
         font-size: 0.8rem;
         gap: v.$spaceRegular;
 
+        li {
+            transition: v.$transitionSimple_01;
+        }
+
         li:hover a,  li.current-menu-item a {
             color: v.$primary;
+        }
+
+        @media screen and (max-width: 960px) {
+            display: none;
         }
     }
 }

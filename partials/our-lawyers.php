@@ -3,7 +3,7 @@
         <div class="container">
             <div class="box-container">
                 <div class="featured-image">
-                    <img src="" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/happy-young-businesswoman.jpg" alt="">
                 </div>
                 <div class="white-box">
                     <div class="text-group">

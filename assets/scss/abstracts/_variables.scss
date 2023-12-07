@@ -13,23 +13,32 @@ $white: #ffffff;
 $linearGradient01: linear-gradient(90deg, $primary 0%, $secondary 100%);
 $linearGradient01_inv: linear-gradient(90deg, $secondary 0%, $primary 100%);
 
+$verticalGradient01: linear-gradient(0deg, $primary 0%, $secondary 100%);
+$verticalGradient01_inv: linear-gradient(180deg, $secondary 0%, $primary 100%);
+
+
 // FONTS
 $display: 'Poppins', sans-serif;
 $paragraph: 'Poppins', sans-serif;
 
-$thin: 100;
-$regular: 300;
-$medium: 400;
-$semiBold: 600;
+    $thin: 100;
+    $regular: 300;
+    $medium: 400;
+    $semiBold: 600;
+
 // SPACING
 $fullWidth: 100%;
 $pageWidth: 1440px;
 $blogWidth: 980px;
 
-$spaceBase: 1rem;
-$spaceUltraThin: calc($spaceBase / 2);
-$spaceThin: $spaceBase;
-$spaceRegular: calc($spaceBase * 2);
-$spaceMedium: calc($spaceRegular * 2);
-$spaceThick: calc($spaceMedium * 2);
-$spaceUltraThick: calc($spaceThick * 2);
+    $spaceBase: 1rem;
+    $spaceUltraThin: calc($spaceBase / 2);
+    $spaceThin: $spaceBase;
+    $spaceRegular: calc($spaceBase * 2);
+    $spaceMedium: calc($spaceRegular * 2);
+    $spaceThick: calc($spaceMedium * 2);
+    $spaceUltraThick: calc($spaceThick * 2);
+
+// TRANSITION
+
+$transitionSimple_01: 0.3s ease-out all;

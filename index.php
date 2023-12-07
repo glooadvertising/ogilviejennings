@@ -1,6 +1,8 @@
 <?php get_header();?>
 <?php is_front_page() ? get_template_part( 'partials/home-hero' ) : get_template_part( 'partials/page-hero' ); ?>
 <?php is_front_page() ? get_template_part( 'partials/our-lawyers' ) : null ; ?>
+<?php is_front_page() ? get_template_part( 'partials/get-started-online' ) : null ; ?>
+<?php is_front_page() ? get_template_part( 'partials/proud-history' ) : null ; ?>
 <?php if(!is_front_page()) { ?>
     <section class="page-content">
         <div class="container">

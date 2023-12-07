@@ -3,4 +3,12 @@
 .our-lawyers {
     background-color: v.$light;
     padding-block: v.$spaceThick;
+
+    @media screen and (max-width: 960px) {
+        padding-block: v.$spaceMedium;
+    }
+
+    @media screen and (max-width: 780px) {
+        padding-block: v.$spaceRegular;
+    }
 }

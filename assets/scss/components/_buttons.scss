@@ -6,4 +6,11 @@
     padding: v.$spaceThin v.$spaceMedium;
     color: v.$primary;
     border: 2px solid;
+    transition: v.$transitionSimple_01;
+
+    &:hover {
+        background-color: v.$primary;
+        color: v.$white;
+        border-color: v.$primary;
+    }
 }

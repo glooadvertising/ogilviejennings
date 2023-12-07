@@ -2,7 +2,31 @@
 
 .home-hero {
     background-color: v.$light;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: row;
     padding-block: v.$spaceThick;
+    .box-one {
+        width: 50%;
+        margin-left: auto;
+
+
+        @media screen and (max-width: 960px) {
+            width: 100%;
+            margin-top: 50%;
+        }
+    }
+
+    @media screen and (max-width: 960px) {
+        background-position: -20vw top;
+    }
+
+    @media screen and (max-width: 680px) {
+        background-position: -40vw -100px;
+        background-size: auto calc(100% + 100px);
+        padding-block-end: 0;
+    }
+
 }

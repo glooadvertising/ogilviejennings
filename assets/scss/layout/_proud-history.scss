@@ -1,0 +1,75 @@
+@use '../abstracts/variables' as v;
+
+.proud-history {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    @media screen and (max-width: 680px) {
+        background-size: contain;
+        background-position: top;
+    }
+    .container {
+        @media screen and (max-width: 680px) {
+            background-color: v.$white;
+            margin-block-start: 56vw;
+        }
+        .translucid-box {
+            background-color: v.$white;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: v.$spaceRegular;
+            padding: v.$spaceThick v.$spaceUltraThick;
+            margin-block: v.$spaceUltraThick;
+            position: relative;
+            @media screen and (max-width: 960px) {
+                padding: calc(v.$spaceThick + v.$spaceRegular);
+            }
+            @media screen and (max-width: 680px) {
+                padding: v.$spaceMedium;
+                margin-block: 0;
+            }
+            &::before, &::after {
+                content: '';
+                height: calc(v.$spaceThick + v.$spaceUltraThick);
+                width: v.$spaceRegular;
+                position: absolute;
+
+                @media screen and (max-width: 680px) {
+                    height: 50%;
+                }
+
+            }
+
+            &::before {
+                background: v.$verticalGradient01;
+                left: v.$spaceThick;
+                top: - v.$spaceUltraThick;
+                @media screen and (max-width: 960px) {
+                    left: v.$spaceMedium;
+                }
+
+                @media screen and (max-width: 680px) {
+                    left: - v.$spaceRegular;
+                    top: 0;
+                }
+            }
+
+            &::after {
+                background: v.$verticalGradient01_inv;
+                right: v.$spaceThick;
+                bottom: - v.$spaceUltraThick;
+                @media screen and (max-width: 960px) {
+                    right: v.$spaceMedium;
+                }
+
+                @media screen and (max-width: 680px) {
+                    right: - v.$spaceRegular;
+                    bottom: 0;
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+@use '../abstracts/variables' as v;
+
+.get-started-online {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-block: v.$spaceThick;
+    .container {
+        display: inherit;
+        gap: v.$spaceMedium;
+        .cards-container{
+            display: flex;
+            flex-direction: row;
+            gap: v.$spaceMedium;
+
+            @media screen and (max-width: 820px) {
+                flex-direction: column;
+            }
+            a {
+                .card {
+                    background-color: v.$white;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    padding: v.$spaceRegular v.$spaceMedium;
+                    box-shadow: 0px 18px 58px 16px rgba(0, 0, 0, 0.06);
+                    transition: v.$transitionSimple_01;
+                    small {
+                        color: v.$primary;
+                    }
+
+                    img {
+                        height: 64px;
+                        width: 64px;
+                        margin-bottom: v.$spaceThin;
+                        opacity: 25%;
+                        transition: inherit;
+                    }
+
+                    &:hover {
+                        box-shadow: 0px 18px 58px 16px rgba(0, 0, 0, 0.12);
+                    }
+
+                    &:hover img {
+                        opacity: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

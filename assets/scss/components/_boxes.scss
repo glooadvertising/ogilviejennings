@@ -18,6 +18,9 @@
         background-color: v.$white;
         padding: v.$spaceMedium v.$spaceThick;
         width: 100%;
+        @media screen and (max-width: 780px) {
+            padding: v.$spaceMedium;
+        }
     }
 
     &::before, &::after {
@@ -45,16 +48,89 @@
         display: flex;
         height: v.$spaceRegular;
         background: v.$linearGradient01_inv;
-        width: 50%;
         position: relative;
     }
 
     &::before {
         margin-right: auto;
+        width: calc(((v.$blogWidth / 2) + 50%) - v.$spaceThick);
+        @media screen and (max-width: 960px) {
+            display: none;
+        }
     }
 
     &::after {
         margin-left: auto;
+        width: calc(100% - (((v.$blogWidth / 2) + 50%) - v.$spaceThick));
+        @media screen and (max-width: 960px) {
+            width: 50%;
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+
+        .box-container {
+            display: inherit;
+            width: v.$fullWidth;
+            @media screen and (max-width: 960px) {
+                flex-direction: column;
+            }
+            .featured-image {
+                display: flex;
+                position: relative;
+                width: 50%;
+                padding-top: v.$spaceMedium;
+                @media screen and (max-width: 960px) {
+                    width: 100%;
+                    position: relative;
+                    padding-top: 0;
+                }
+                img {
+                    position: absolute;
+                    width: calc(100% + v.$spaceMedium);
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center 25%;
+
+                    @media screen and (max-width: 960px) {
+                        width: 100%;
+                        height: auto;
+                        aspect-ratio: 16/9;
+                        position: relative;
+                    }
+                }
+            }
+            .white-box {
+                background-color: v.$white;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 50%;
+                padding: v.$spaceMedium v.$spaceThick;
+                gap: v.$spaceRegular;
+                position: relative;
+                @media screen and (max-width: 960px) {
+                    width: 100%;
+                    padding: v.$spaceMedium;
+                    margin-top: v.$spaceRegular;
+                    &::before {
+                        content: '';
+                        display: flex;
+                        height: v.$spaceRegular;
+                        background: v.$linearGradient01_inv;
+                        position: absolute;
+                        margin-right: auto;
+                        left: - v.$spaceRegular;
+                        top: - v.$spaceRegular;
+                        width: 50%;
+                    }
+                }
+            
+            }
+    
+        }
     }
 
 }
