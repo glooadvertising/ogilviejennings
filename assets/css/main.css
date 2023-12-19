@@ -10,6 +10,10 @@ html {
   box-sizing: inherit;
 }
 
+p {
+  margin-block-start: 0;
+}
+
 h1, h2, h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -19,6 +23,11 @@ h1, h2, h3 {
 
 h1 {
   font-size: 3rem;
+}
+@media screen and (max-width: 780px) {
+  h1 {
+    font-size: 2rem;
+  }
 }
 
 a,
@@ -240,9 +249,17 @@ a {
 
 .page-hero {
   background-color: #F2F2F2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   aspect-ratio: 3/1;
   position: relative;
+}
+@media screen and (max-width: 780px) {
+  .page-hero {
+    aspect-ratio: 16/9;
+  }
 }
 
 .page-heading .container {
@@ -255,7 +272,7 @@ a {
   flex-direction: column;
   background: linear-gradient(90deg, #FAA21B 0%, #EE3223 100%);
   height: 2rem;
-  width: calc(100% - (100% - 1440px) / 2);
+  width: calc((100% - 1440px) / 2 + 1440px);
   max-width: 90%;
   margin-left: auto;
 }
@@ -399,11 +416,30 @@ a {
   align-items: flex-start;
   gap: 4rem;
 }
+@media screen and (max-width: 780px) {
+  .lawyer-card {
+    flex-direction: column;
+  }
+}
 .lawyer-card .col-left {
   width: 34%;
 }
+.lawyer-card .col-left img {
+  max-width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 780px) {
+  .lawyer-card .col-left {
+    width: 100%;
+  }
+}
 .lawyer-card .col-right {
   width: 66%;
+}
+@media screen and (max-width: 780px) {
+  .lawyer-card .col-right {
+    width: 100%;
+  }
 }
 .lawyer-card .col-right h2 {
   margin-top: 0;
@@ -574,4 +610,28 @@ a {
 }
 .get-started-online .container .cards-container a .card:hover img {
   opacity: 100%;
+}
+
+.practice-areas li {
+  gap: 1rem;
+  align-items: center;
+  transition: 0.3s ease-out all;
+}
+.practice-areas li::after {
+  content: "Cick to see more";
+  display: inline-block;
+  color: #FAA21B;
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  padding: 3px 6px;
+  border-radius: 5px;
+  transition: 0.3s ease-out all;
+  opacity: 0;
+}
+.practice-areas li:hover::after {
+  opacity: 1;
+}
+.practice-areas li:hover::marker {
+  color: #EE3223;
 }/*# sourceMappingURL=main.css.map */

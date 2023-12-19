@@ -1,4 +1,4 @@
-<section class="proud-history" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/hero.jpg');">
+<section class="proud-history" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/docks.jpg');">
     <div class="container">
         <div class="translucid-box">
             <div class="text-container">

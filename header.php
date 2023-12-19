@@ -6,7 +6,7 @@
     <title><?php bloginfo( 'title' );?></title>
     <?php wp_head();?>
 </head>
-<body>
+<body <?php body_class(); ?>>
     <header class="main-header">
         <div class="container">
             <a href="<?php echo site_url('/'); ?>" class="main-logo">

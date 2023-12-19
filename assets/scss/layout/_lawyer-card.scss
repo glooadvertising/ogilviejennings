@@ -6,12 +6,30 @@
     align-items: flex-start;
     gap: v.$spaceMedium;
 
+    @media screen and (max-width: 780px) {
+        flex-direction: column;
+    }
+
     .col-left {
         width: 34%;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 780px) {
+            width: 100%;
+        }
+
     }
 
     .col-right {
         width: 66%;
+
+        @media screen and (max-width: 780px) {
+            width: 100%;
+        }
+
         h2 {
             margin-top: 0;
         }

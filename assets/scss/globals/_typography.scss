@@ -9,9 +9,9 @@ h1, h2, h3 {
 
 h1 {
     font-size: 3rem;
-}
-
-p {
+    @media screen and (max-width: 780px) {
+        font-size: 2rem;
+    }
 }
 
 a, 

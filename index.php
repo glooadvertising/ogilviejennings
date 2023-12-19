@@ -27,6 +27,28 @@
             <?php wp_reset_postdata(); ?>
                 
             <?php }?>
+
+            <?php if(is_page('practice-areas')) { ?>
+                <?php
+                $args = array(
+                    'post_parent' => $post->ID,
+                    'post_type' => 'page',
+                    'orderby' => 'menu_order'
+                );
+
+                $child_query = new WP_Query( $args );
+                ?>
+                <ul class="practice-areas">
+                    <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
+    
+                        <li <?php post_class(); ?>>  
+                            <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
+
+                <?php wp_reset_postdata(); ?>
+            <?php } ?>
         </div>
     </section>
 <?php } ?>
