@@ -16,22 +16,35 @@
 
 }
 .page-heading {
+    margin-bottom: v.$spaceRegular;
+    @media screen and (max-width: 920px) {
+        margin-bottom: 0;
+    }
+
     .container {
         width: v.$blogWidth;
         margin-block: v.$spaceRegular;
     }
     &::before {
         content: '';
+        transition: 0.3s ease-out width;
         display: flex;
         flex-direction: column;
         background: v.$linearGradient01_inv;
         height: v.$spaceRegular;
         width: calc(((100% - v.$pageWidth) / 2) + v.$pageWidth);
-        max-width: 90%;
         margin-left: auto;
+        @media screen and (max-width: 1600px) {
+            width: calc((((100% - v.$blogWidth) / 2) + v.$blogWidth) - v.$spaceRegular);
+        }
+        @media screen and (max-width: 920px) {
+            width: calc(100% - v.$spaceRegular);
+        }
+
     }
     &::after {
         content: '';
+        transition: 0.3s ease-out width;
         display: flex;
         flex-direction: column;
         background: v.$linearGradient01_inv;
@@ -39,6 +52,10 @@
         width: calc((100% - v.$pageWidth) / 2);
         max-width: 90%;
         margin-right: auto;
+        @media screen and (max-width: 1600px) {
+            width: calc(((100% - v.$blogWidth) / 2) + v.$spaceRegular);
+        }
+
     }
 
 }

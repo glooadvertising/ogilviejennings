@@ -20,3 +20,19 @@ add_theme_support( 'post-thumbnails' );
 // CLASIC EDITOR
 add_filter('gutenberg_can_edit_post', '__return_false');
 add_filter('use_block_editor_for_post', '__return_false');
+
+
+// TAXONOMIeS FOR PAGES
+
+add_action( 'init', 'pages_tax' );
+function pages_tax() {
+    register_taxonomy(
+        'roles',
+        'page',
+        array(
+            'label' => __( 'Roles' ),
+            'rewrite' => array( 'slug' => 'roles' ),
+            'hierarchical' => true,
+        )
+    );
+}

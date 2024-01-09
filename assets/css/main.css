@@ -262,22 +262,41 @@ a {
   }
 }
 
+.page-heading {
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 920px) {
+  .page-heading {
+    margin-bottom: 0;
+  }
+}
 .page-heading .container {
   width: 980px;
   margin-block: 2rem;
 }
 .page-heading::before {
   content: "";
+  transition: 0.3s ease-out width;
   display: flex;
   flex-direction: column;
   background: linear-gradient(90deg, #FAA21B 0%, #EE3223 100%);
   height: 2rem;
   width: calc((100% - 1440px) / 2 + 1440px);
-  max-width: 90%;
   margin-left: auto;
+}
+@media screen and (max-width: 1600px) {
+  .page-heading::before {
+    width: calc((100% - 980px) / 2 + 980px - 2rem);
+  }
+}
+@media screen and (max-width: 920px) {
+  .page-heading::before {
+    width: calc(100% - 2rem);
+  }
 }
 .page-heading::after {
   content: "";
+  transition: 0.3s ease-out width;
   display: flex;
   flex-direction: column;
   background: linear-gradient(90deg, #FAA21B 0%, #EE3223 100%);
@@ -285,6 +304,11 @@ a {
   width: calc((100% - 1440px) / 2);
   max-width: 90%;
   margin-right: auto;
+}
+@media screen and (max-width: 1600px) {
+  .page-heading::after {
+    width: calc((100% - 980px) / 2 + 2rem);
+  }
 }
 
 .page-content {
@@ -415,6 +439,7 @@ a {
   flex-direction: row;
   align-items: flex-start;
   gap: 4rem;
+  margin-bottom: 8rem;
 }
 @media screen and (max-width: 780px) {
   .lawyer-card {
@@ -453,9 +478,6 @@ a {
   padding-block: 2rem;
   border-bottom: 2px solid #EE3223;
   font-size: 0.8rem;
-}
-.lawyer-card .additional-info_row:last-child {
-  border-bottom: 0;
 }
 .lawyer-card .additional-info_row .content {
   width: 70%;
