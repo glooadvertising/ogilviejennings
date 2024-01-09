@@ -7,12 +7,16 @@
     <?php wp_head();?>
 </head>
 <body <?php body_class(); ?>>
+    <?php get_template_part('partials/mobile-menu'); ?>
     <header class="main-header">
         <div class="container">
             <a href="<?php echo site_url('/'); ?>" class="main-logo">
             <span class="invisible-text"><?php bloginfo('title'); ?></span>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/OJ_logo_trans.png" alt="Ogilvie Jennings logo">
             </a>
-            <?php wp_nav_menu(); ?>
+            <span>
+                <?php wp_nav_menu(); ?>
+                <?php get_template_part( 'partials/burger' ); ?>
+            </span>
         </div>
     </header>

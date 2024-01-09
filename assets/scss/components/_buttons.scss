@@ -14,3 +14,43 @@
         border-color: v.$primary;
     }
 }
+
+.burger {
+    display: none;
+    @media screen and (max-width: 960px) {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        cursor: pointer;
+        > * {
+            display: flex;
+            width: 100%;
+            height: 2px;
+            background: v.$linearGradient01_inv;
+            transition: v.$transitionSimple_01;
+        }
+    }
+}
+@media screen and (max-width: 960px) {
+    .cross {
+        justify-content: center ;
+        position: relative;
+        > * {
+            position: absolute;
+            &.lid {
+                transform: rotate(45deg);
+            }
+            &.patty {
+                display: none;
+            }
+            &.base {
+                transform: rotate(-45deg);
+            }
+
+
+        }
+    }
+}

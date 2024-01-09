@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as v;
+
+.mobile-menu {
+    display: none;
+    @media screen and (max-width: 960px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: v.$linearGradient01_inv;
+        color: v.$white;
+        position: fixed;
+        height: 100vh;
+        padding: v.$spaceMedium;
+        z-index: 1000;
+        left: -100%;
+        transition: v.$transitionSimple_01;
+        min-width: calc(300px + v.$spaceRegular);
+        box-shadow: 5px 0 v.$spaceMedium rgba($color: #000000, $alpha: 0.5);
+
+    }
+    .menu {
+        padding-inline-start: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2rem;
+        li{
+            display: flex;
+            flex-direction: column;
+    
+            a {
+                padding: v.$spaceThin;
+                transition: v.$transitionSimple_01;
+                &:hover {
+                    padding-left: v.$spaceRegular;
+                }
+            }
+
+        }
+    }
+}
+
+.visible {
+    left: 0;
+}
