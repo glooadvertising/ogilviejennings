@@ -5,7 +5,7 @@
                 <h2>Proud history</h2>
                 <p>Ogilvie Jennings is a well-established Tasmanian law firm. We are proud of our heritage, and excited about our future.</p>
             </div>
-            <a href="<?php site_url();?>/about-us" class="btn">About us</a>
+            <a href="<?php echo get_site_url();?>/about-us" class="btn">About us</a>
         </div>
     </div>
 </section>
