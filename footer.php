@@ -13,20 +13,20 @@
                 <div>
                     <strong>Get started online</strong>
                     <ul>
-                        <li><a href="#">Start Family Law Online</a></li>
-                        <li><a href="#">Start your Will Online</a></li>
-                        <li><a href="#">Start Probate Online</a></li>
+                        <li><a href="https://ogilviejennings.settify.com.au/landing?referral=homepage" target="_blank">Start Family Law Online</a></li>
+                        <li><a href="https://ogilviejennings.wills.settify.com.au/landing?referral=homepage" target="_blank">Start your Will Online</a></li>
+                        <li><a href="https://ogilviejennings.probate.settify.com.au/landing?referral=homepage/" target="_blank">Start Probate Online</a></li>
                     </ul>
                 </div>
                 <div>
                     <strong>Practice areas</strong>
                     <ul>
-                        <li><a href="#">Commercial & Corporate</a></li>
-                        <li><a href="#">Cobstitution Law</a></li>
-                        <li><a href="#">Criminal Law</a></li>
-                        <li><a href="#">Employment Law</a></li>
-                        <li><a href="#">Family Law</a></li>
-                        <li><a href="#">Injuries & Compensation</a></li>
+                        <li><a href="<?php site_url(); ?>/commercial-corporate">Commercial & Corporate</a></li>
+                        <li><a href="<?php site_url(); ?>/construction-law">Constitution Law</a></li>
+                        <li><a href="<?php site_url(); ?>/criminal-law">Criminal Law</a></li>
+                        <li><a href="<?php site_url(); ?>/employment-law">Employment Law</a></li>
+                        <li><a href="<?php site_url(); ?>/family-law">Family Law</a></li>
+                        <li><a href="<?php site_url(); ?>/injuries-compensation">Injuries & Compensation</a></li>
                     </ul>
                 </div>
             </div>
@@ -34,7 +34,7 @@
     </footer>
     <div class="sub-footer">
         <div class="container">
-            <span><a href="#">Privacy policy</a>  |  <a href="<?php echo site_url('/')?>"> <?php bloginfo('title'); ?></a></span>
+            <span><a href="<?php site_url(); ?>/privacy-policy">Privacy policy</a>  |  <a href="<?php echo site_url('/')?>"> <?php bloginfo('title'); ?></a></span>
             <span>Site by<a href="http://glooadvertising.com.au" target="_blank">Gloo</a></span>
         </div>
     </div>

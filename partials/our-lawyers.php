@@ -10,7 +10,7 @@
                         <h2>Our lawyers</h2>
                         <p>Our lawyers are great listeners who take the time to hear your story, find out a bit more about them.</p>
                     </div>
-                    <a href="/our-lawyers" class="btn">Meet our team</a>
+                    <a href="<?php site_url(); ?>/our-lawyers" class="btn">Meet our team</a>
                 </div>
             </div>
         </div>
