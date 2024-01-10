@@ -6,7 +6,7 @@
                     <h1>Your trusted advisors</h1>
                     <p>Ogilvie Jennings are a well-established full-service Tasmanian law firm for private individuals through to large companies.</p>
                 </div>
-                <a href="<?php site_url(); ?>/contact-us" class="btn">Talk to us</a>
+                <a href="<?php get_site_url(); ?>/contact-us" class="btn">Talk to us</a>
             </div>
         </div>
     </div>

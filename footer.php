@@ -21,12 +21,12 @@
                 <div>
                     <strong>Practice areas</strong>
                     <ul>
-                        <li><a href="<?php site_url(); ?>/commercial-corporate">Commercial & Corporate</a></li>
-                        <li><a href="<?php site_url(); ?>/construction-law">Constitution Law</a></li>
-                        <li><a href="<?php site_url(); ?>/criminal-law">Criminal Law</a></li>
-                        <li><a href="<?php site_url(); ?>/employment-law">Employment Law</a></li>
-                        <li><a href="<?php site_url(); ?>/family-law">Family Law</a></li>
-                        <li><a href="<?php site_url(); ?>/injuries-compensation">Injuries & Compensation</a></li>
+                        <li><a href="<?php get_site_url(); ?>/commercial-corporate">Commercial & Corporate</a></li>
+                        <li><a href="<?php get_site_url(); ?>/construction-law">Constitution Law</a></li>
+                        <li><a href="<?php get_site_url(); ?>/criminal-law">Criminal Law</a></li>
+                        <li><a href="<?php get_site_url(); ?>/employment-law">Employment Law</a></li>
+                        <li><a href="<?php get_site_url(); ?>/family-law">Family Law</a></li>
+                        <li><a href="<?php get_site_url(); ?>/injuries-compensation">Injuries & Compensation</a></li>
                     </ul>
                 </div>
             </div>
@@ -34,7 +34,7 @@
     </footer>
     <div class="sub-footer">
         <div class="container">
-            <span><a href="<?php site_url(); ?>/privacy-policy">Privacy policy</a>  |  <a href="<?php echo site_url('/')?>"> <?php bloginfo('title'); ?></a></span>
+            <span><a href="<?php get_site_url(); ?>/privacy-policy">Privacy policy</a>  |  <a href="<?php echo site_url('/')?>"> <?php bloginfo('title'); ?></a></span>
             <span>Site by<a href="http://glooadvertising.com.au" target="_blank">Gloo</a></span>
         </div>
     </div>
