@@ -8,12 +8,20 @@
     justify-content: space-between;
     padding-block: v.$spaceThin;
 
+    .main-logo {
+        img {
+            width: 200px;
+        }
+    }
+
     .menu {
         display: inline-flex;
         list-style: none;
         text-transform: uppercase;
         padding-inline-start: 0;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 1px;
         gap: v.$spaceRegular;
 
         li {
@@ -22,6 +30,11 @@
 
         li:hover a,  li.current-menu-item a {
             color: v.$primary;
+        }
+
+        @media screen and (max-width: 1280px) {
+            font-size: 0.8rem;
+            gap: v.$spaceThin;
         }
 
         @media screen and (max-width: 960px) {

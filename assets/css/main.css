@@ -417,12 +417,17 @@ a {
   justify-content: space-between;
   padding-block: 1rem;
 }
+.main-header .main-logo img {
+  width: 200px;
+}
 .main-header .menu {
   display: inline-flex;
   list-style: none;
   text-transform: uppercase;
   padding-inline-start: 0;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
   gap: 2rem;
 }
 .main-header .menu li {
@@ -430,6 +435,12 @@ a {
 }
 .main-header .menu li:hover a, .main-header .menu li.current-menu-item a {
   color: #EE3223;
+}
+@media screen and (max-width: 1280px) {
+  .main-header .menu {
+    font-size: 0.8rem;
+    gap: 1rem;
+  }
 }
 @media screen and (max-width: 960px) {
   .main-header .menu {
