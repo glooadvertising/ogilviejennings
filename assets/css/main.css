@@ -751,4 +751,39 @@ a {
 }
 .practice-areas li:hover::marker {
   color: #EE3223;
+}
+
+.contact-section {
+  gap: 4rem;
+  padding-bottom: 4rem;
+}
+.contact-section .container {
+  width: 980px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: inherit;
+}
+@media screen and (max-width: 980px) {
+  .contact-section .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .contact-section .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.contact-section .container .office-card {
+  font-size: 0.9rem;
+}
+.contact-section .container .office-card h2 {
+  color: #EE3223;
+  text-transform: capitalize;
+  border-bottom: 2px solid #ee3223;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+.contact-section .container .office-card a:hover {
+  color: #FAA21B;
 }/*# sourceMappingURL=main.css.map */

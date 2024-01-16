@@ -53,4 +53,5 @@
         </div>
     </section>
 <?php } ?>
+<?php is_page( 'contact-us' ) ? get_template_part('partials/contact') : null; ?>
 <?php get_footer();?>

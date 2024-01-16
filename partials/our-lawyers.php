@@ -8,7 +8,7 @@
                 <div class="white-box">
                     <div class="text-group">
                         <h2>Our lawyers</h2>
-                        <p>Our lawyers are great listeners who take the time to hear your story, find out a bit more about them.</p>
+                        <p>Our lawyers are great listeners who take the time to hear your story. Find out a bit more about them.</p>
                     </div>
                     <a href="<?php echo get_site_url(); ?>/our-lawyers" class="btn">Meet our team</a>
                 </div>
