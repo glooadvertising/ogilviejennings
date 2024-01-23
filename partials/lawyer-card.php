@@ -1,4 +1,4 @@
-<div class="lawyer-card">
+<div id="<?php echo basename(get_permalink()); ?>" class="lawyer-card" data-aos="fade-up">
     <div class="col-left">
         <?php the_post_thumbnail(); ?>
     </div>

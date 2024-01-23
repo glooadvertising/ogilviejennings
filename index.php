@@ -4,20 +4,37 @@
 <?php is_front_page() ? get_template_part( 'partials/get-started-online' ) : null ; ?>
 <?php is_front_page() ? get_template_part( 'partials/proud-history' ) : null ; ?>
 <?php if(!is_front_page()) { ?>
+    
+    <?php is_page('our-lawyers') ? get_template_part( 'partials/lawyers-list' ) : null; ?>
     <section class="page-content">
         <div class="container">
             <?php the_content(); ?>
-
+            </div>
+    </section>
+    <section class="page-content">
+        <div class="container">
             <?php if(is_page('our-lawyers')) {?>
                 <?php $args = array(
-                'post_parent' => $post->ID,
-                'post_type' => 'page',
-                'orderby' => 'menu_order',
-                'order' => 'ASC'
-            );
+                    'post_parent' => $post->ID,
+                    'taxonomy' => 'role',
+                    'post_type' => 'page',
+                    'orderby' => ['menu_order', 'taxonomy'],
+
+                    'order' => 'ASC',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'roles',
+                            'field' => 'slug',
+                            'terms' => ['director', 'senior-associate', 'associate', 'lawyer', 'conveyancer'],
+                        )
+                    )
+                );
 
                 $child_query = new WP_Query( $args );
             ?>
+
+
+
 
             <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
 

@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as v;
+
+.lawyers-list {
+    // color: v.$white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: sticky;
+    top: 0;
+    float: right;
+    padding: 0 v.$spaceRegular v.$spaceRegular;
+    width: calc((100% - v.$blogWidth) / 2);
+    margin-left:  calc((-100% - v.$blogWidth) / 2);
+    z-index: 100;
+    h2 {
+        font-size: 1.2rem;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding-inline-start: 0;
+        padding-bottom: v.$spaceRegular;
+        margin-block: 0;
+        list-style: none;
+        font-size: 0.8rem;
+        li {
+            border-left: 2px solid #eeeeee;
+            display: flex;
+            padding-block: v.$spaceUltraThin;
+            padding-inline-start: 1rem;
+            a {
+                transition: v.$transitionSimple_01;
+            }
+            &:hover, &:active, &:focus-visible {
+                padding-inline-start: calc(1rem - 2px);
+                color: v.$primary;
+                border-left: 4px solid v.$secondary;
+
+            }
+        }
+
+    }
+}

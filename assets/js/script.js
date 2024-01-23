@@ -1,3 +1,5 @@
+AOS.init();
+
 let burger = document.querySelector('.burger')
 let mobileMenu = document.querySelector('.mobile-menu')
 
