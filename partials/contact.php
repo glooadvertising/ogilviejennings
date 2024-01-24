@@ -3,22 +3,22 @@ $domain = "ogilviejennings.com.au";
 $offices = [
     [
         "location"      => "hobart",
-        "phone"         => "0362350800",
-        "fax"           => "0362350888",
+        "phone"         => "03 6235 0800",
+        "fax"           => "03 6235 0888",
         "address"       => "Level 4, 39 Murray Street, Hobart TAS 7001, GPO Box 435",
         "email_handler" => "reception"
     ],
     [
         "location"      => "kingston",
-        "phone"         => "0362350882",
-        "fax"           => "0362350888",
+        "phone"         => "03 6235 0882",
+        "fax"           => "03 6235 0888",
         "address"       => "1/11 John Street, Kingston TAS 7050",
         "email_handler" => "kingston"
     ],
     [
         "location"      => "glenorchy",
-        "phone"         => "0362350885",
-        "fax"           => "0362350888",
+        "phone"         => "03 6235 0885",
+        "fax"           => "03 6235 0888",
         "address"       => "282 Main Road, Glenorchy TAS 7010",
         "email_handler" => "glenorchy"
     ]
