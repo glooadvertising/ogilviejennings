@@ -30,3 +30,7 @@ a {
 .invisible-text {
     display: none;
 }
+
+.page-width {
+    width: v.$pageWidth !important;
+}

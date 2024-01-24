@@ -3,7 +3,7 @@
     </div>
 </section>
 <section class="page-heading">
-    <div class="container">
+    <div class="container <?php echo is_page('our-lawyers') ? "page-width" : null; ?>">
         <h1><?php the_title(); ?></h1>
     </div>
 </section>

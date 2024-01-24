@@ -65,6 +65,10 @@ a {
   display: none;
 }
 
+.page-width {
+  width: 1440px !important;
+}
+
 .btn {
   display: inline-flex;
   background-color: #ffffff;
@@ -466,8 +470,18 @@ a {
 .page-content-cols .container .left-col {
   width: 75%;
 }
+@media screen and (max-width: 780px) {
+  .page-content-cols .container .left-col {
+    width: 60%;
+  }
+}
 .page-content-cols .container .right-col {
   width: 25%;
+}
+@media screen and (max-width: 780px) {
+  .page-content-cols .container .right-col {
+    width: 40%;
+  }
 }
 .page-content-cols .container h2 {
   border-bottom: 3px solid #EE3223;
