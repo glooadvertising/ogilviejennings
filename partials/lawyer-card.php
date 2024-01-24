@@ -6,7 +6,7 @@
         <h2><?php the_title(); ?></h2>
         <?php the_content(); ?>
         <?php $qual = get_field('qualifications'); ?>
-        <?php if( $qual ): ?>
+        <?php if( $qual['degree'] || $qual['university__college'] ): ?>
             <div class="additional-info_row">
                 <h3>Qualifications</h3>
                 <div class="content">

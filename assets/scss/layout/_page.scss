@@ -15,3 +15,29 @@
     }
 }
 
+
+.page-content-cols {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: v.$spaceThick;
+    position: relative;
+    gap: 4rem;
+    .container {
+        .left-col {
+            width: 75%;
+        }
+        .right-col {
+            width: 25%;
+        }
+        width: v.$pageWidth;
+        gap: inherit;
+        h2 {
+            border-bottom: 3px solid v.$primary;
+            padding-bottom: v.$spaceUltraThin;
+            margin-top: v.$spaceRegular;
+        }
+    }
+}
+
+
+

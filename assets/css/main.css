@@ -307,14 +307,14 @@ a {
   justify-content: flex-start;
   position: sticky;
   top: 0;
-  float: right;
-  padding: 0 2rem 2rem;
-  width: calc((100% - 980px) / 2);
-  margin-left: calc((-100% - 980px) / 2);
+  padding: 0;
   z-index: 100;
+  overflow-y: auto;
 }
 .lawyers-list h2 {
   font-size: 1.2rem;
+  margin-top: 0 !important;
+  border-bottom: none !important;
 }
 .lawyers-list ul {
   display: flex;
@@ -447,6 +447,29 @@ a {
   width: 980px;
 }
 .page-content .container h2 {
+  border-bottom: 3px solid #EE3223;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.page-content-cols {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 8rem;
+  position: relative;
+  gap: 4rem;
+}
+.page-content-cols .container {
+  width: 1440px;
+  gap: inherit;
+}
+.page-content-cols .container .left-col {
+  width: 75%;
+}
+.page-content-cols .container .right-col {
+  width: 25%;
+}
+.page-content-cols .container h2 {
   border-bottom: 3px solid #EE3223;
   padding-bottom: 0.5rem;
   margin-top: 2rem;
