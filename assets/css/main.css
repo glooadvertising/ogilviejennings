@@ -305,20 +305,20 @@ a {
 }
 
 .lawyers-list {
-  display: flex;
-  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   position: sticky;
-  top: 0;
+  top: 4rem;
   padding: 0;
-  z-index: 100;
-  overflow-y: auto;
 }
-.lawyers-list h2 {
+.lawyers-list summary {
   font-size: 1.2rem;
   margin-top: 0 !important;
   border-bottom: none !important;
+  cursor: pointer;
+}
+.lawyers-list summary::marker {
+  color: #FAA21B;
 }
 .lawyers-list ul {
   display: flex;
@@ -331,6 +331,7 @@ a {
 }
 .lawyers-list ul li {
   border-left: 2px solid #eeeeee;
+  margin-left: 4px;
   display: flex;
   padding-block: 0.5rem;
   padding-inline-start: 1rem;
@@ -463,25 +464,23 @@ a {
   position: relative;
   gap: 4rem;
 }
+@media screen and (max-width: 980px) {
+  .page-content-cols {
+    gap: 2rem;
+  }
+}
 .page-content-cols .container {
   width: 1440px;
   gap: inherit;
 }
 .page-content-cols .container .left-col {
-  width: 75%;
-}
-@media screen and (max-width: 780px) {
-  .page-content-cols .container .left-col {
-    width: 60%;
-  }
+  width: calc(100% - 220px);
 }
 .page-content-cols .container .right-col {
-  width: 25%;
-}
-@media screen and (max-width: 780px) {
-  .page-content-cols .container .right-col {
-    width: 40%;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
 }
 .page-content-cols .container h2 {
   border-bottom: 3px solid #EE3223;

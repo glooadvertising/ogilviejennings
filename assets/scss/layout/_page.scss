@@ -22,19 +22,25 @@
     padding-bottom: v.$spaceThick;
     position: relative;
     gap: 4rem;
+    @media screen and (max-width: 980px) {
+        gap: 2rem;
+    }
     
     .container {
         .left-col {
-            width: 75%;
-            @media screen and (max-width: 780px) {
-                width: 60%;
-            }
+            width: calc(100% - 220px);
+            // @media screen and (max-width: 780px) {
+            //     width: 60%;
+            // }
         }
         .right-col {
-            width: 25%;
-            @media screen and (max-width: 780px) {
-                width: 40%;
-            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 220px;
+            // @media screen and (max-width: 780px) {
+            //     width: 40%;
+            // }
         }
         width: v.$pageWidth;
         gap: inherit;

@@ -1,19 +1,19 @@
 @use '../abstracts/variables' as v;
 
 .lawyers-list {
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     position: sticky;
-    top: 0;
+    top: v.$spaceMedium;
     padding: 0;
-    z-index: 100;
-    overflow-y: auto;
-    h2 {
+    summary {
         font-size: 1.2rem;
         margin-top: 0 !important;
         border-bottom: none !important;
+        cursor: pointer;
+        &::marker {
+            color: v.$secondary;
+        }
     }
     ul {
         display: flex;
@@ -25,6 +25,7 @@
         font-size: 0.8rem;
         li {
             border-left: 2px solid #eeeeee;
+            margin-left: 4px;
             display: flex;
             padding-block: v.$spaceUltraThin;
             padding-inline-start: 1rem;

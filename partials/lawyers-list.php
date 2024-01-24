@@ -17,13 +17,15 @@
         $directors = new WP_Query( $args );
     ?>
 
-    <h2>Directors</h2>
-    <ul>
-        <?php while ( $directors->have_posts() ) : $directors->the_post(); ?>
-        <li><a href="#<?php echo basename(get_permalink()); ?>"><?php the_title(); ?></a></li>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-    </ul>
+    <details open>
+        <summary>Directors</summary>
+        <ul>
+            <?php while ( $directors->have_posts() ) : $directors->the_post(); ?>
+            <li><a href="#<?php echo basename(get_permalink()); ?>"><?php the_title(); ?></a></li>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+        </ul>
+    </details>
 
     <?php 
     $args = array(
@@ -44,14 +46,15 @@
         $senior_associates = new WP_Query( $args );
     ?>
 
-    <h2>Senior Associates</h2>
-    <ul>
-        <?php while ( $senior_associates->have_posts() ) : $senior_associates->the_post(); ?>
-        <li><a href="#<?php echo basename(get_permalink()); ?>"><?php the_title(); ?></a></li>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-    </ul>
-
+    <details>
+        <summary>Senior Associates</summary>
+        <ul>
+            <?php while ( $senior_associates->have_posts() ) : $senior_associates->the_post(); ?>
+            <li><a href="#<?php echo basename(get_permalink()); ?>"><?php the_title(); ?></a></li>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+        </ul>
+    </details>
     <?php 
     $args = array(
         'post_parent' => $post->ID,
@@ -70,13 +73,15 @@
 
         $associates = new WP_Query( $args );
     ?>
-    <h2>Associates</h2>
-    <ul>
-        <?php while ( $associates->have_posts() ) : $associates->the_post(); ?>
-        <li><a href="#<?php echo basename(get_permalink()); ?>"><?php the_title(); ?></a></li>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-    </ul>
+    <details>
+        <summary>Associates</summary>
+        <ul>
+            <?php while ( $associates->have_posts() ) : $associates->the_post(); ?>
+            <li><a href="#<?php echo basename(get_permalink()); ?>"><?php the_title(); ?></a></li>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+        </ul>
+    </details>
 
     <?php 
     $args = array(
@@ -96,14 +101,15 @@
 
         $lawyers = new WP_Query( $args );
     ?>
-
-    <h2>Laywers</h2>
-    <ul>
-        <?php while ( $lawyers->have_posts() ) : $lawyers->the_post(); ?>
-        <li><a href="#<?php echo basename(get_permalink()); ?>"><?php the_title(); ?></a></li>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-    </ul>
+    <details>
+        <summary>Laywers</summary>
+        <ul>
+            <?php while ( $lawyers->have_posts() ) : $lawyers->the_post(); ?>
+            <li><a href="#<?php echo basename(get_permalink()); ?>"><?php the_title(); ?></a></li>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+        </ul>
+    </details>
 
     <?php 
     $args = array(
@@ -123,11 +129,13 @@
 
         $conveyancers = new WP_Query( $args );
     ?>
-    <h2>Conveyancers</h2>
-    <ul>
-        <?php while ( $conveyancers->have_posts() ) : $conveyancers->the_post(); ?>
-        <li><a href="#<?php echo basename(get_permalink()); ?>"><?php the_title(); ?></a></li>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-    </ul>
+    <details>
+        <summary>Conveyancers</summary>
+        <ul>
+            <?php while ( $conveyancers->have_posts() ) : $conveyancers->the_post(); ?>
+            <li><a href="#<?php echo basename(get_permalink()); ?>"><?php the_title(); ?></a></li>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+        </ul>
+    </details>
 </div>
