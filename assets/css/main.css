@@ -311,6 +311,11 @@ a {
   top: 4rem;
   padding: 0;
 }
+@media screen and (max-width: 425px) {
+  .lawyers-list {
+    display: none;
+  }
+}
 .lawyers-list summary {
   font-size: 1.2rem;
   margin-top: 0 !important;
@@ -476,11 +481,21 @@ a {
 .page-content-cols .container .left-col {
   width: calc(100% - 220px);
 }
+@media screen and (max-width: 425px) {
+  .page-content-cols .container .left-col {
+    width: 100%;
+  }
+}
 .page-content-cols .container .right-col {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 220px;
+}
+@media screen and (max-width: 425px) {
+  .page-content-cols .container .right-col {
+    width: 100%;
+  }
 }
 .page-content-cols .container h2 {
   border-bottom: 3px solid #EE3223;
@@ -658,6 +673,17 @@ a {
 }
 .lawyer-card .additional-info_row .content span.aop:not(:last-child) a::after {
   content: " | ";
+}
+@media screen and (max-width: 425px) {
+  .lawyer-card .additional-info_row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .lawyer-card .additional-info_row h3 {
+    color: #EE3223;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
 }
 
 .our-lawyers {

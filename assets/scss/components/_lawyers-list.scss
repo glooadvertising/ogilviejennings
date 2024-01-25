@@ -6,6 +6,9 @@
     position: sticky;
     top: v.$spaceMedium;
     padding: 0;
+    @media screen and (max-width: 425px) {
+        display: none;
+    }
     summary {
         font-size: 1.2rem;
         margin-top: 0 !important;
