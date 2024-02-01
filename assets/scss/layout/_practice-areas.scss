@@ -5,19 +5,8 @@
         gap: v.$spaceThin;
         align-items: center;
         transition: v.$transitionSimple_01;
-        &::after {
-            content: 'Cick to see more';
-            display: inline-block;
-            color: v.$secondary;
-            font-size: 0.6rem;
-            letter-spacing: 0.1rem;
-            text-transform: uppercase;
-            padding: 3px 6px;
-            border-radius: 5px;
-            transition: v.$transitionSimple_01;
-            opacity: 0;
-        }
         &:hover {
+            color: v.$primary;;
             &::after {
                 opacity: 1;
             }

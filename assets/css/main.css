@@ -840,17 +840,8 @@ a {
   align-items: center;
   transition: 0.3s ease-out all;
 }
-.practice-areas li::after {
-  content: "Cick to see more";
-  display: inline-block;
-  color: #FAA21B;
-  font-size: 0.6rem;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  padding: 3px 6px;
-  border-radius: 5px;
-  transition: 0.3s ease-out all;
-  opacity: 0;
+.practice-areas li:hover {
+  color: #EE3223;
 }
 .practice-areas li:hover::after {
   opacity: 1;

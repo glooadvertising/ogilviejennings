@@ -21,7 +21,7 @@
                         <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
         
                             <li <?php post_class(); ?>>  
-                                <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+                                <a href="<?php the_permalink(); ?>#<?php echo basename(get_permalink()); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
                             </li>
                         <?php endwhile; ?>
                     </ul>
