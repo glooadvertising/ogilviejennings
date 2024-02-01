@@ -2,7 +2,7 @@
     <div class="container">
         <div class="text-container">
             <h2>Get started online</h2>
-            <p>You've come to the right place. Our online systems allow you to get started anywhere, any time. See the links below</p>
+            <p>You've come to the right place. Our online systems allow you to get started anywhere, any time. See the links below.</p>
         </div>
         <div class="cards-container">
         <a href="https://ogilviejennings.wills.settify.com.au/landing?referral=homepage" target="_blank">

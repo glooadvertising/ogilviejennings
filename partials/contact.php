@@ -13,14 +13,14 @@ $offices = [
         "phone"         => "03 6235 0882",
         "fax"           => "03 6235 0888",
         "address"       => "1/11 John Street, Kingston TAS 7050",
-        "email_handler" => "kingston"
+        "email_handler" => "kingston.reception"
     ],
     [
         "location"      => "glenorchy",
         "phone"         => "03 6235 0885",
         "fax"           => "03 6235 0888",
         "address"       => "282 Main Road, Glenorchy TAS 7010",
-        "email_handler" => "glenorchy"
+        "email_handler" => "glenorchy.reception"
     ]
 
 ]
