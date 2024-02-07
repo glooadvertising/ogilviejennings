@@ -60,7 +60,7 @@
         'post_parent' => $post->ID,
         'taxonomy' => 'role',
         'post_type' => 'page',
-        'orderby' => ['menu_order', 'taxonomy'],
+        'orderby' => 'menu_order',
         'order' => 'ASC',
         'tax_query' => array(
             array(
@@ -88,7 +88,7 @@
         'post_parent' => $post->ID,
         'taxonomy' => 'role',
         'post_type' => 'page',
-        'orderby' => ['menu_order', 'taxonomy'],
+        'orderby' => 'menu_order',
         'order' => 'ASC',
         'tax_query' => array(
             array(
@@ -116,7 +116,7 @@
         'post_parent' => $post->ID,
         'taxonomy' => 'role',
         'post_type' => 'page',
-        'orderby' => ['menu_order', 'taxonomy'],
+        'orderby' => 'menu_order',
         'order' => 'ASC',
         'tax_query' => array(
             array(
