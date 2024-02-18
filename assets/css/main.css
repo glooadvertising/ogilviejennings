@@ -641,6 +641,9 @@ a {
 }
 .lawyer-card .col-left img {
   max-width: 100%;
+  aspect-ratio: 6/8;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: auto;
 }
 @media screen and (max-width: 780px) {
