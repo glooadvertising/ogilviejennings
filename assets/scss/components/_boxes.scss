@@ -92,7 +92,7 @@
                     width: calc(100% + v.$spaceMedium);
                     height: 100%;
                     object-fit: cover;
-                    object-position: center 25%;
+                    object-position: center;
 
                     @media screen and (max-width: 960px) {
                         width: 100%;

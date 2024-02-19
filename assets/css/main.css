@@ -220,8 +220,8 @@ a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center 25%;
-     object-position: center 25%;
+  -o-object-position: center;
+     object-position: center;
 }
 @media screen and (max-width: 960px) {
   .box-two .container .box-container .featured-image img {
