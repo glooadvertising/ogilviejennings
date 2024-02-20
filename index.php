@@ -163,7 +163,7 @@
                             array(
                                 'taxonomy' => 'roles',
                                 'field' => 'slug',
-                                'terms' => 'conveyanced'
+                                'terms' => 'conveyancer'
                             )
                         )
                     );
