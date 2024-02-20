@@ -13,8 +13,8 @@
                 <div>
                     <strong>Get started online</strong>
                     <ul>
-                        <li><a href="https://ogilviejennings.settify.com.au/landing?referral=homepage" target="_blank">Start Family Law Online</a></li>
-                        <!-- li><a href="https://ogilviejennings.wills.settify.com.au/landing?referral=homepage" target="_blank">Start your Will Online</a></li>
+                        <!--li><a href="https://ogilviejennings.settify.com.au/landing?referral=homepage" target="_blank">Start Family Law Online</a></li>
+                        <li><a href="https://ogilviejennings.wills.settify.com.au/landing?referral=homepage" target="_blank">Start your Will Online</a></li>
                         <li><a href="https://ogilviejennings.probate.settify.com.au/landing?referral=homepage/" target="_blank">Start Probate Online</a></li -->
                     </ul>
                 </div>
