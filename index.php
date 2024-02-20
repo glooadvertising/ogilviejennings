@@ -48,7 +48,7 @@
                             array(
                                 'taxonomy' => 'roles',
                                 'field' => 'slug',
-                                'terms' => ['director', 'senior-associate', 'associate', 'lawyer', 'conveyancer'],
+                                'terms' => 'director'
                             )
                         )
                     );
