@@ -44,7 +44,7 @@
                         'taxonomy' => 'role',
                         'post_type' => 'page',
                         'posts_per_page' => -1,
-                        'orderby' => 'taxonomy',
+                        'orderby' => 'menu_order',
                         'order' => 'ASC',
                         'tax_query' => array(
                             array(
@@ -72,7 +72,7 @@
                         'taxonomy' => 'role',
                         'post_type' => 'page',
                         'posts_per_page' => -1,
-                        'orderby' => 'taxonomy',
+                        'orderby' => 'menu_order',
                         'order' => 'ASC',
                         'tax_query' => array(
                             array(
