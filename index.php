@@ -94,6 +94,91 @@
 
                 <?php wp_reset_postdata(); ?>
 
+                <!-- Associates -->
+                <?php $args = array(
+                        'post_parent' => $post->ID,
+                        'taxonomy' => 'role',
+                        'post_type' => 'page',
+                        'posts_per_page' => -1,
+                        'orderby' => 'menu_order',
+                        'order' => 'ASC',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'roles',
+                                'field' => 'slug',
+                                'terms' => 'associate'
+                            )
+                        )
+                    );
+
+                    $child_query = new WP_Query( $args );
+                ?>
+
+                <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
+
+                    <?php get_template_part( 'partials/lawyer-card' ); ?>
+                    
+                <?php endwhile; ?>
+
+                <?php wp_reset_postdata(); ?>
+                
+                <!-- Lawyers -->
+                <?php $args = array(
+                        'post_parent' => $post->ID,
+                        'taxonomy' => 'role',
+                        'post_type' => 'page',
+                        'posts_per_page' => -1,
+                        'orderby' => 'menu_order',
+                        'order' => 'ASC',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'roles',
+                                'field' => 'slug',
+                                'terms' => 'lawyer'
+                            )
+                        )
+                    );
+
+                    $child_query = new WP_Query( $args );
+                ?>
+
+                <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
+
+                    <?php get_template_part( 'partials/lawyer-card' ); ?>
+                    
+                <?php endwhile; ?>
+
+                <?php wp_reset_postdata(); ?>
+
+                <!-- conveyancer -->
+
+                <?php $args = array(
+                        'post_parent' => $post->ID,
+                        'taxonomy' => 'role',
+                        'post_type' => 'page',
+                        'posts_per_page' => -1,
+                        'orderby' => 'menu_order',
+                        'order' => 'ASC',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'roles',
+                                'field' => 'slug',
+                                'terms' => 'conveyanced'
+                            )
+                        )
+                    );
+
+                    $child_query = new WP_Query( $args );
+                ?>
+
+                <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
+
+                    <?php get_template_part( 'partials/lawyer-card' ); ?>
+                    
+                <?php endwhile; ?>
+
+                <?php wp_reset_postdata(); ?>
+
 
                     
                 <?php }?>
