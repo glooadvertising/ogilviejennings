@@ -42,7 +42,7 @@
                         'taxonomy' => 'role',
                         'post_type' => 'page',
                         'posts_per_page' => -1,
-                        'orderby' => ['taxonomy'],
+                        'orderby' => 'terms',
                         'order' => 'ASC',
                         'tax_query' => array(
                             array(
