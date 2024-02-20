@@ -78,7 +78,7 @@
                             array(
                                 'taxonomy' => 'roles',
                                 'field' => 'slug',
-                                'terms' => 'senior-associates'
+                                'terms' => 'senior-associate'
                             )
                         )
                     );
