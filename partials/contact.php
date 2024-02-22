@@ -36,7 +36,7 @@ $offices = [
         <h2><?php echo $office['location']; ?></h2>
         <span><strong>Phone: </strong><a href="tel:<?php echo $office['phone']; ?>"><?php echo $office['phone']; ?></a></span><br>
         <span><strong>Fax: </strong><a href="tel:<?php echo $office['fax']; ?>"><?php echo $office['fax']; ?></a></span><br>
-        <span><strong>Address: </strong><a href="<?php echo $office['map-link']; ?>" target="_blank"><?php echo $office['address']; ?></a></span><br>
+        <span><strong>Address: </strong><a href="<?php echo $office['map-link']; ?>" target="_blank" class="highlighted-link"><?php echo $office['address']; ?></a></span><br>
         <span><strong>Email: </strong><a href="mailto:<?php echo $office['email_handler']; ?>@<?php echo $domain; ?>"><?php echo $office['email_handler']; ?>@<?php echo $domain; ?></a></span>
     </div>
     <?php }?>
