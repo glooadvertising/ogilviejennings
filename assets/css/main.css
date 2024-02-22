@@ -874,22 +874,25 @@ a {
 .contact-section .container {
   width: 980px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: inherit;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 @media screen and (max-width: 980px) {
   .contact-section .container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-}
-@media screen and (max-width: 680px) {
-  .contact-section .container {
     grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
   }
 }
 .contact-section .container .office-card {
   font-size: 0.9rem;
+}
+.contact-section .container .office-card:first-child {
+  grid-column: span 2;
+}
+@media screen and (max-width: 980px) {
+  .contact-section .container .office-card:first-child {
+    grid-column: span 1;
+  }
 }
 .contact-section .container .office-card h2 {
   color: #EE3223;
@@ -897,6 +900,21 @@ a {
   border-bottom: 2px solid #ee3223;
   padding-bottom: 0.5rem;
   margin-top: 2rem;
+}
+.contact-section .container .office-card span {
+  display: flex;
+}
+@media screen and (max-width: 580px) {
+  .contact-section .container .office-card span {
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+  }
+}
+.contact-section .container .office-card span strong {
+  margin-right: 1rem;
+  min-width: 70px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 .contact-section .container .office-card a:hover {
   color: #FAA21B;

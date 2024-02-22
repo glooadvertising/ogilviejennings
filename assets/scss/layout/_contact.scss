@@ -6,16 +6,22 @@
     .container {
         width: v.$blogWidth;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         @media screen and (max-width: 980px) {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             gap: v.$spaceRegular;
         }
-        @media screen and (max-width: 680px) {
-            grid-template-columns: repeat(1, 1fr);
-        }
-        gap: inherit;
+        // @media screen and (max-width: 680px) {
+        //     grid-template-columns: repeat(1, 1fr);
+        // }
+        gap: v.$spaceRegular;
         .office-card {
+            &:first-child {
+                grid-column: span 2;
+                @media screen and (max-width: 980px) {
+                    grid-column: span 1;
+                }
+            }
             font-size: 0.9rem;
             h2 {
                 color: v.$primary;
@@ -23,6 +29,19 @@
                 border-bottom: 2px solid #ee3223;
                 padding-bottom: 0.5rem;
                 margin-top: 2rem;
+            }
+            span {
+                display: flex;
+                @media screen and (max-width: 580px) {
+                    flex-direction: column;
+                    margin-bottom: 0.5rem;
+                }
+                strong {
+                    margin-right: v.$spaceThin;
+                    min-width: 70px;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                }
             }
             a {
                 &:hover{
