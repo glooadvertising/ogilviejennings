@@ -898,9 +898,6 @@ a {
   padding-bottom: 0.5rem;
   margin-top: 2rem;
 }
-.contact-section .container .office-card a {
-  text-decoration: underline;
-}
 .contact-section .container .office-card a:hover {
   color: #FAA21B;
 }
