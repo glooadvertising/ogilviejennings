@@ -4,54 +4,54 @@
     gap: v.$spaceMedium;
     padding-bottom: v.$spaceMedium;
     .container {
-        width: v.$blogWidth;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        @media screen and (max-width: 980px) {
-            grid-template-columns: repeat(1, 1fr);
-            gap: v.$spaceRegular;
-        }
-        // @media screen and (max-width: 680px) {
-        //     grid-template-columns: repeat(1, 1fr);
-        // }
-        gap: v.$spaceRegular;
-        .office-card {
+        column-gap: v.$spaceRegular;
+        width: v.$blogWidth;
+        .office-card-wrapper {
             &:first-child {
                 grid-column: span 2;
+                display: flex;
                 @media screen and (max-width: 980px) {
                     grid-column: span 1;
+                    .office-card {
+                        width: 100%;
+                    }
                 }
+                justify-content: flex-start;
             }
-            font-size: 0.9rem;
-            h2 {
-                color: v.$primary;
-                text-transform: capitalize;
-                border-bottom: 2px solid #ee3223;
-                padding-bottom: 0.5rem;
-                margin-top: 2rem;
-            }
-            span {
-                display: flex;
-                @media screen and (max-width: 580px) {
-                    flex-direction: column;
-                    margin-bottom: 0.5rem;
+            .office-card {
+                display: grid;
+                font-size: 0.9rem;
+                h2 {
+                    color: v.$primary;
+                    text-transform: capitalize;
+                    border-bottom: 2px solid #ee3223;
+                    padding-bottom: 0.5rem;
+                    margin-top: 2rem;
                 }
-                strong {
-                    margin-right: v.$spaceThin;
-                    min-width: 70px;
-                    font-weight: 300;
-                    text-transform: uppercase;
+                span {
+                    display: flex;
+                    @media screen and (max-width: 580px) {
+                        flex-direction: column;
+                        margin-bottom: 0.5rem;
+                    }
+                    strong {
+                        margin-right: v.$spaceThin;
+                        min-width: 70px;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                    }
                 }
-            }
-            a {
-                &:hover{
+                a {
+                    &:hover{
+                        color: v.$secondary;
+                    }
+                }
+                a.highlighted-link {
                     color: v.$secondary;
-                }
-            }
-            a.highlighted-link {
-                color: v.$secondary;
-                &:hover {
-                    color: inherit;
+                    &:hover {
+                        color: inherit;
+                    }
                 }
             }
         }

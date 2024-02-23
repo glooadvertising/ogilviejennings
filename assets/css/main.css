@@ -872,56 +872,56 @@ a {
   padding-bottom: 4rem;
 }
 .contact-section .container {
-  width: 980px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  width: 980px;
 }
-@media screen and (max-width: 980px) {
-  .contact-section .container {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
-  }
-}
-.contact-section .container .office-card {
-  font-size: 0.9rem;
-}
-.contact-section .container .office-card:first-child {
+.contact-section .container .office-card-wrapper:first-child {
   grid-column: span 2;
+  display: flex;
+  justify-content: flex-start;
 }
 @media screen and (max-width: 980px) {
-  .contact-section .container .office-card:first-child {
+  .contact-section .container .office-card-wrapper:first-child {
     grid-column: span 1;
   }
+  .contact-section .container .office-card-wrapper:first-child .office-card {
+    width: 100%;
+  }
 }
-.contact-section .container .office-card h2 {
+.contact-section .container .office-card-wrapper .office-card {
+  display: grid;
+  font-size: 0.9rem;
+}
+.contact-section .container .office-card-wrapper .office-card h2 {
   color: #EE3223;
   text-transform: capitalize;
   border-bottom: 2px solid #ee3223;
   padding-bottom: 0.5rem;
   margin-top: 2rem;
 }
-.contact-section .container .office-card span {
+.contact-section .container .office-card-wrapper .office-card span {
   display: flex;
 }
 @media screen and (max-width: 580px) {
-  .contact-section .container .office-card span {
+  .contact-section .container .office-card-wrapper .office-card span {
     flex-direction: column;
     margin-bottom: 0.5rem;
   }
 }
-.contact-section .container .office-card span strong {
+.contact-section .container .office-card-wrapper .office-card span strong {
   margin-right: 1rem;
   min-width: 70px;
   font-weight: 300;
   text-transform: uppercase;
 }
-.contact-section .container .office-card a:hover {
+.contact-section .container .office-card-wrapper .office-card a:hover {
   color: #FAA21B;
 }
-.contact-section .container .office-card a.highlighted-link {
+.contact-section .container .office-card-wrapper .office-card a.highlighted-link {
   color: #FAA21B;
 }
-.contact-section .container .office-card a.highlighted-link:hover {
+.contact-section .container .office-card-wrapper .office-card a.highlighted-link:hover {
   color: inherit;
 }/*# sourceMappingURL=main.css.map */
