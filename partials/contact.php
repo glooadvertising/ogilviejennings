@@ -5,7 +5,8 @@ $offices = [
         "location"      => "hobart",
         "phone"         => "03 6235 0800",
         "fax"           => "03 6235 0888",
-        "address"       => "Level 4, 39 Murray Street, Hobart TAS 7001, GPO Box 435",
+        "address"       => "Level 4, 39 Murray Street, Hobart TAS 7001",
+        "gpo-box"       => "435",
         "map-link"      => "https://www.google.com/maps/place/Ogilvie+Jennings/@-42.8861291,147.3313788,16z/data=!4m16!1m9!3m8!1s0xaa6e758510a93103:0xcc5b999e24d3a542!2s39+Murray+St,+Hobart+TAS+7000!3b1!8m2!3d-42.883189!4d147.3271624!10e3!16s%2Fg%2F11c2fynr_m!3m5!1s0xaa6e7585d726218d:0xe595e649f76ad8ac!8m2!3d-42.883128!4d147.3271265!16s%2Fg%2F1tqg1l1w?entry=ttu",
         "email_handler" => "reception"
     ],
@@ -38,6 +39,7 @@ $offices = [
             <span><strong>Phone: </strong><a href="tel:<?php echo $office['phone']; ?>"><?php echo $office['phone']; ?></a></span>
             <span><strong>Fax: </strong><a href="tel:<?php echo $office['fax']; ?>"><?php echo $office['fax']; ?></a></span>
             <span><strong>Address: </strong><a href="<?php echo $office['map-link']; ?>" target="_blank" class="highlighted-link"><?php echo $office['address']; ?></a></span>
+            <?php if(isset($office['gpo-box'])){?><span><strong>GPO Box: </strong><?php echo $office['gpo-box']; ?></span><?php }?>
             <span><strong>Email: </strong><a href="mailto:<?php echo $office['email_handler']; ?>@<?php echo $domain; ?>"><?php echo $office['email_handler']; ?>@<?php echo $domain; ?></a></span>
         </div>
     </div>

@@ -12,6 +12,12 @@
             padding-bottom: v.$spaceUltraThin;
             margin-top: v.$spaceRegular;
         }
+        a {
+            text-decoration: underline;
+            &:hover {
+                color: v.$secondary;
+            }
+        }
     }
 }
 
