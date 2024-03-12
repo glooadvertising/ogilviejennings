@@ -7,6 +7,10 @@
     align-items: center;
     justify-content: space-between;
     padding-block: v.$spaceThin;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 0 20px #00000025;
 
     .main-logo {
         img {

@@ -517,6 +517,10 @@ a {
   align-items: center;
   justify-content: space-between;
   padding-block: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1450980392);
 }
 .main-header .main-logo img {
   width: 200px;
