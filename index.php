@@ -3,12 +3,12 @@
 <?php is_front_page() ? get_template_part( 'partials/our-lawyers' ) : null ; ?>
 <?php is_front_page() ? get_template_part( 'partials/get-started-online' ) : null ; ?>
 <?php is_front_page() ? get_template_part( 'partials/proud-history' ) : null ; ?>
-<?php if(!is_front_page() && !is_page('our-lawyers')) { ?>
+<?php if(!is_front_page() && !is_page('our-lawyers') && !is_child(11)) { ?>
     <section class="page-content">
         <div class="container">
             <?php the_content(); ?>
             <?php if(is_page('practice-areas')) { ?>
-                    <?php
+                <?php
                     $args = array(
                         'post_parent' => $post->ID,
                         'post_type' => 'page',
@@ -27,13 +27,13 @@
                         <?php endwhile; ?>
                     </ul>
 
-                    <?php wp_reset_postdata(); ?>
-                <?php } ?>
+                <?php wp_reset_postdata(); ?>
+            <?php } ?>
 
         </div>
     </section>
 <?php } ?>
-<?php if(is_page('our-lawyers')) {?>
+<?php if(is_page('our-lawyers') || is_child(11)) { ?>
     <section class="page-content-cols">
         <div class="container">
             <div class="left-col">
@@ -180,17 +180,18 @@
 
                 <?php wp_reset_postdata(); ?>
 
-
-                    
-                <?php }?>
-
-
             </div>
             <div class="right-col">
                 <?php is_page('our-lawyers') ? get_template_part( 'partials/lawyers-list' ) : null; ?>
+                <?php if(is_child(11)) {
+                    echo "<h3>See other practice areas</h3>";
+                    }?>
+                <?php is_child(11) ? wp_nav_menu(['menu' => 'practice-areas']) : null; ?>
             </div>
         </div>
     </section>
+<?php }?>
 
 <?php is_page( 'contact-us' ) ? get_template_part('partials/contact') : null; ?>
+
 <?php get_footer();?>
