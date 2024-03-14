@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as v;
+
+.submenu-container {
+    display: none;
+    @media screen and (max-width: 560px) {
+        background: v.$linearGradient01;
+        color: v.$white;
+        position: fixed;
+        z-index: 1000;
+        bottom: v.$spaceRegular;
+        left: v.$spaceRegular;
+        right: v.$spaceRegular;
+        padding: v.$spaceBase;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 20px #00000025;
+    }
+
+    .close {
+        position: absolute;
+        top: v.$spaceThin;
+        right: v.$spaceThin;
+        cursor: pointer;
+    }
+}
+
+.floating-btn {
+    display: none;
+    background-color: v.$white;
+    padding: v.$spaceThin v.$spaceMedium;
+    color: v.$primary;
+    border: 2px solid;
+    transition: v.$transitionSimple_01;
+    position: fixed;
+    left: v.$spaceRegular;
+    right: v.$spaceRegular;
+    bottom: v.$spaceRegular;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px #00000025;
+    z-index: 999;
+    cursor: pointer;
+
+    @media screen and (max-width: 560px) {
+        display: inline-flex;
+    }
+    
+
+
+    &:hover {
+        background-color: v.$primary;
+        color: v.$white;
+        border-color: v.$primary;
+    }
+}
+
+.show {
+    @media screen and (max-width: 560px) {
+        display: flex !important;
+    }
+    
+}

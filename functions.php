@@ -50,3 +50,14 @@ function is_child($pageID) {
                return false; 
 	}
 }
+
+
+function mobile_submenu($submenu_title = 'submenu-title', $submenu_name = 'submenu-name') {
+    echo "<div id=\"open\" class=\"floating-btn\">$submenu_title</div>";
+    echo "<div id=\"show\" class=\"submenu-container\">";
+    echo "<div id=\"close\" class=\"close\">";
+    echo "X";
+    echo "</div>";
+    wp_nav_menu(["menu" => $submenu_name]);    
+    echo "</div>";      
+}

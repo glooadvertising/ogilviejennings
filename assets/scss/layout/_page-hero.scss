@@ -5,13 +5,31 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     display: flex;
     aspect-ratio: 6/1;
     position: relative;
 
-    @media screen and (max-width: 780px) {
+    @media screen and (max-width: 1280px) {
+        aspect-ratio: 6/2;
+    }
+    @media screen and (max-width: 980px) {
         aspect-ratio: 16/9;
+        display: none;
+    }
+
+
+}
+.page-hero-mobile {
+    background-color: v.$light;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    aspect-ratio: 16/9;
+    position: relative;
+
+    @media screen and (max-width: 980px) {
+        display: flex;
     }
 
 

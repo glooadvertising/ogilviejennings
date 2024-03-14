@@ -380,6 +380,65 @@ a {
   border-bottom: none !important;
 }
 
+.submenu-container {
+  display: none;
+}
+@media screen and (max-width: 560px) {
+  .submenu-container {
+    background: linear-gradient(90deg, #EE3223 0%, #FAA21B 100%);
+    color: #ffffff;
+    position: fixed;
+    z-index: 1000;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1450980392);
+  }
+}
+.submenu-container .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.floating-btn {
+  display: none;
+  background-color: #ffffff;
+  padding: 1rem 4rem;
+  color: #EE3223;
+  border: 2px solid;
+  transition: 0.3s ease-out all;
+  position: fixed;
+  left: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1450980392);
+  z-index: 999;
+  cursor: pointer;
+}
+@media screen and (max-width: 560px) {
+  .floating-btn {
+    display: inline-flex;
+  }
+}
+.floating-btn:hover {
+  background-color: #EE3223;
+  color: #ffffff;
+  border-color: #EE3223;
+}
+
+@media screen and (max-width: 560px) {
+  .show {
+    display: flex !important;
+  }
+}
+
 .home-hero {
   background-color: #F2F2F2;
   background-repeat: no-repeat;
@@ -417,14 +476,34 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   display: flex;
   aspect-ratio: 6/1;
   position: relative;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1280px) {
+  .page-hero {
+    aspect-ratio: 6/2;
+  }
+}
+@media screen and (max-width: 980px) {
   .page-hero {
     aspect-ratio: 16/9;
+    display: none;
+  }
+}
+
+.page-hero-mobile {
+  background-color: #F2F2F2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+  aspect-ratio: 16/9;
+  position: relative;
+}
+@media screen and (max-width: 980px) {
+  .page-hero-mobile {
+    display: flex;
   }
 }
 
@@ -517,7 +596,7 @@ a {
 .page-content-cols .container .left-col {
   width: calc(100% - 220px);
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 560px) {
   .page-content-cols .container .left-col {
     width: 100%;
   }
@@ -528,7 +607,7 @@ a {
   align-items: center;
   width: 220px;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 560px) {
   .page-content-cols .container .right-col {
     width: 100%;
     display: none;
