@@ -398,7 +398,7 @@ a {
     justify-content: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1450980392);
     overflow-y: scroll;
-    max-height: 60%;
+    max-height: 90%;
     min-height: 45%;
     border-radius: 1rem 1rem 0 0;
   }
