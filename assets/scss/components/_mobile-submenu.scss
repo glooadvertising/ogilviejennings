@@ -4,16 +4,28 @@
     display: none;
     @media screen and (max-width: 560px) {
         background: v.$linearGradient01;
+        border-radius: 0cap;
         color: v.$white;
         position: fixed;
         z-index: 1000;
-        bottom: v.$spaceRegular;
+        bottom: 0;
         left: v.$spaceRegular;
         right: v.$spaceRegular;
-        padding: v.$spaceBase;
+        padding: v.$spaceMedium v.$spaceBase v.$spaceRegular;
         align-items: center;
         justify-content: center;
         box-shadow: 0 0 20px #00000025;
+        overflow-y: scroll;
+        max-height: 60%;
+        border-radius: v.$spaceBase v.$spaceBase 0 0;
+
+        li {
+            &:hover, &:active, &.current-menu-item, &:focus-visible {
+                padding-inline-start: calc(1rem - 2px);
+                color: v.$black !important;
+                border-left: 4px solid #faa21b;
+            }
+        }
     }
 
     .close {
@@ -21,6 +33,9 @@
         top: v.$spaceThin;
         right: v.$spaceThin;
         cursor: pointer;
+        svg {
+            fill: v.$white;
+        }
     }
 }
 

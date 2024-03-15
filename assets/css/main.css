@@ -351,7 +351,7 @@ a {
   border-left: 4px solid #FAA21B;
 }
 
-#menu-practice-areas {
+#menu-practice-areas, #menu-practice-areas-1 {
   position: sticky;
   top: 0;
   display: flex;
@@ -362,19 +362,19 @@ a {
   list-style: none;
   font-size: 0.8rem;
 }
-#menu-practice-areas li {
+#menu-practice-areas li, #menu-practice-areas-1 li {
   border-left: 2px solid #eee;
   margin-left: 4px;
   display: flex;
   padding-block: 0.5rem;
   padding-inline-start: 1rem;
 }
-#menu-practice-areas li:hover, #menu-practice-areas li:active, #menu-practice-areas li.current-menu-item, #menu-practice-areas li:focus-visible {
+#menu-practice-areas li:hover, #menu-practice-areas li:active, #menu-practice-areas li.current-menu-item, #menu-practice-areas li:focus-visible, #menu-practice-areas-1 li:hover, #menu-practice-areas-1 li:active, #menu-practice-areas-1 li.current-menu-item, #menu-practice-areas-1 li:focus-visible {
   padding-inline-start: calc(1rem - 2px);
   color: #ee3223;
   border-left: 4px solid #faa21b;
 }
-#menu-practice-areas h3 {
+#menu-practice-areas h3, #menu-practice-areas-1 h3 {
   font-size: 1.2rem;
   margin-top: 0 !important;
   border-bottom: none !important;
@@ -386,16 +386,25 @@ a {
 @media screen and (max-width: 560px) {
   .submenu-container {
     background: linear-gradient(90deg, #EE3223 0%, #FAA21B 100%);
+    border-radius: 0cap;
     color: #ffffff;
     position: fixed;
     z-index: 1000;
-    bottom: 2rem;
+    bottom: 0;
     left: 2rem;
     right: 2rem;
-    padding: 1rem;
+    padding: 4rem 1rem 2rem;
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1450980392);
+    overflow-y: scroll;
+    max-height: 60%;
+    border-radius: 1rem 1rem 0 0;
+  }
+  .submenu-container li:hover, .submenu-container li:active, .submenu-container li.current-menu-item, .submenu-container li:focus-visible {
+    padding-inline-start: calc(1rem - 2px);
+    color: #000000 !important;
+    border-left: 4px solid #faa21b;
   }
 }
 .submenu-container .close {
@@ -403,6 +412,9 @@ a {
   top: 1rem;
   right: 1rem;
   cursor: pointer;
+}
+.submenu-container .close svg {
+  fill: #ffffff;
 }
 
 .floating-btn {

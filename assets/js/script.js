@@ -11,6 +11,7 @@ burger.addEventListener('click', () => {
 let close = document.querySelector('#close')
 let open = document.querySelector('#open')
 let show = document.querySelector('#show')
+let link = document.querySelectorAll('.lawyers-list details ul li a')
 
 open.addEventListener('click', () => {
     show.classList.toggle('show')
@@ -18,4 +19,12 @@ open.addEventListener('click', () => {
 close.addEventListener('click', () => {
     show.classList.toggle('show')
 })
+// link.addEventListener('click', () => {
+//     show.classList.toggle('show')
+// })
+for (let i = 0; i < link.length; i++) {
+    link[i].addEventListener('click', () => {
+        show.classList.toggle('show');
+    });
+}
 

@@ -196,5 +196,5 @@
 
 <!--?php get_template_part('partials/mobile-submenu'); ?-->
 <?php is_child(11) ? mobile_submenu('See more practice areas', 'practice-areas'): null; ?>
-<?php is_page('our-lawyers') ? mobile_submenu('See more lawyers', 'practice-areas'): null; ?>
+<?php is_page('our-lawyers') ? get_template_part('partials/mobile-submenu'): null; ?>
 <?php get_footer();?>
