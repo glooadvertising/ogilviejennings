@@ -27,4 +27,8 @@ for (let i = 0; i < link.length; i++) {
         show.classList.toggle('show');
     });
 }
+burger.addEventListener('click', () => {
+    show.classList.remove('show');
+})
+
 
