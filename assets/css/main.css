@@ -399,6 +399,7 @@ a {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1450980392);
     overflow-y: scroll;
     max-height: 60%;
+    min-height: 45%;
     border-radius: 1rem 1rem 0 0;
   }
   .submenu-container li:hover, .submenu-container li:active, .submenu-container li.current-menu-item, .submenu-container li:focus-visible {

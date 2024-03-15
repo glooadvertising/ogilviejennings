@@ -17,6 +17,7 @@
         box-shadow: 0 0 20px #00000025;
         overflow-y: scroll;
         max-height: 60%;
+        min-height: 45%;
         border-radius: v.$spaceBase v.$spaceBase 0 0;
 
         li {
