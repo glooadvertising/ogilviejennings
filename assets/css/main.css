@@ -407,6 +407,9 @@ a {
     color: #000000 !important;
     border-left: 4px solid #faa21b;
   }
+  .submenu-container .lawyers-list {
+    display: block;
+  }
 }
 .submenu-container .close {
   position: absolute;
