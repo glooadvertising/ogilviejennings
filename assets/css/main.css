@@ -7,7 +7,7 @@ html {
 }
 @media screen and (max-width: 560px) {
   html {
-    scroll-padding-top: 150px;
+    scroll-padding-top: 130px;
   }
 }
 
