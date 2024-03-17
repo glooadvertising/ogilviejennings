@@ -83,6 +83,18 @@ a {
   border: 2px solid;
   transition: 0.3s ease-out all;
 }
+@media screen and (max-width: 680px) {
+  .btn {
+    padding: 1rem 2rem;
+  }
+}
+@media screen and (max-width: 580px) {
+  .btn {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .btn:hover {
   background-color: #EE3223;
   color: #ffffff;
@@ -152,6 +164,11 @@ a {
 @media screen and (max-width: 780px) {
   .box-one .box-container {
     padding: 4rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .box-one .box-container {
+    padding: 2rem;
   }
 }
 .box-one::before, .box-one::after {
@@ -263,6 +280,11 @@ a {
     left: -2rem;
     top: -2rem;
     width: 50%;
+  }
+}
+@media screen and (max-width: 680px) {
+  .box-two .container .box-container .white-box {
+    padding: 2rem;
   }
 }
 
@@ -481,7 +503,7 @@ a {
 }
 @media screen and (max-width: 960px) {
   .home-hero {
-    background-position: -20vw top;
+    background-position: -20vw -20vh;
   }
 }
 @media screen and (max-width: 680px) {
@@ -489,6 +511,16 @@ a {
     background-position: -40vw -100px;
     background-size: auto calc(100% + 100px);
     padding-block-end: 0;
+  }
+}
+@media screen and (max-width: 560px) {
+  .home-hero {
+    background-position: -55vw -20vh;
+  }
+}
+@media screen and (max-width: 460px) {
+  .home-hero {
+    background-position: -75vw -25vh;
   }
 }
 
@@ -893,7 +925,7 @@ a {
 }
 @media screen and (max-width: 680px) {
   .proud-history .container .translucid-box {
-    padding: 4rem;
+    padding: 2rem;
     margin-block: 0;
   }
 }

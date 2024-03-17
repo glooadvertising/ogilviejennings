@@ -4,6 +4,14 @@
     display: inline-flex;
     background-color: v.$white;
     padding: v.$spaceThin v.$spaceMedium;
+    @media screen and (max-width: 680px) {
+        padding: v.$spaceThin v.$spaceRegular;
+    }
+    @media screen and (max-width: 580px) {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
     color: v.$primary;
     border: 2px solid;
     transition: v.$transitionSimple_01;

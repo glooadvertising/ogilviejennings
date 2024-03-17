@@ -32,6 +32,7 @@ burger.addEventListener('click', () => {
 })
 open.addEventListener('click', () => {
     mobileMenu.classList.remove('visible')
+    burger.classList.toggle('cross')
 })
 
 

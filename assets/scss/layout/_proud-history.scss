@@ -27,7 +27,7 @@
                 padding: calc(v.$spaceThick + v.$spaceRegular);
             }
             @media screen and (max-width: 680px) {
-                padding: v.$spaceMedium;
+                padding: v.$spaceRegular;
                 margin-block: 0;
             }
             &::before, &::after {

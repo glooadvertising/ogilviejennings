@@ -20,7 +20,7 @@
     }
 
     @media screen and (max-width: 960px) {
-        background-position: -20vw top;
+        background-position: -20vw -20vh;
     }
 
     @media screen and (max-width: 680px) {
@@ -29,4 +29,11 @@
         padding-block-end: 0;
     }
 
+    @media screen and (max-width: 560px) {
+        background-position: -55vw -20vh;
+    }
+
+    @media screen and (max-width: 460px) {
+        background-position: -75vw -25vh;
+    }
 }

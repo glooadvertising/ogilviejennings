@@ -21,6 +21,9 @@
         @media screen and (max-width: 780px) {
             padding: v.$spaceMedium;
         }
+        @media screen and (max-width: 680px) {
+            padding: v.$spaceRegular;
+        }
     }
 
     &::before, &::after {
@@ -127,7 +130,9 @@
                         width: 50%;
                     }
                 }
-            
+                @media screen and (max-width: 680px) {
+                    padding: v.$spaceRegular;
+                }
             }
     
         }
