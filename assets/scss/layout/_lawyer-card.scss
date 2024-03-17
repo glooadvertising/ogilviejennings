@@ -11,6 +11,18 @@
         flex-direction: column;
     }
 
+    @media screen and (max-width: 560px) {
+        padding-block: 0;
+        padding-bottom: v.$spaceThick;
+        gap: 1rem;
+        .col-left {
+            img {
+                aspect-ratio: 1/1 !important;
+                object-position: 50% 0%;
+            }
+        }
+    }
+
     .col-left {
         width: 34%;
         position: relative;

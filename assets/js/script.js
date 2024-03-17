@@ -30,5 +30,8 @@ for (let i = 0; i < link.length; i++) {
 burger.addEventListener('click', () => {
     show.classList.remove('show');
 })
+open.addEventListener('click', () => {
+    mobileMenu.classList.remove('visible')
+})
 
 

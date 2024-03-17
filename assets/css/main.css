@@ -5,6 +5,11 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 300px;
 }
+@media screen and (max-width: 560px) {
+  html {
+    scroll-padding-top: 150px;
+  }
+}
 
 *,
 *::before,
@@ -769,6 +774,18 @@ a {
 @media screen and (max-width: 780px) {
   .lawyer-card {
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 560px) {
+  .lawyer-card {
+    padding-block: 0;
+    padding-bottom: 8rem;
+    gap: 1rem;
+  }
+  .lawyer-card .col-left img {
+    aspect-ratio: 1/1 !important;
+    -o-object-position: 50% 0%;
+       object-position: 50% 0%;
   }
 }
 .lawyer-card .col-left {
