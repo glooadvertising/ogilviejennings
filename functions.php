@@ -63,3 +63,62 @@ function mobile_submenu($submenu_title = 'submenu-title', $submenu_name = 'subme
     wp_nav_menu(["menu" => $submenu_name]);    
     echo "</div>";      
 }
+
+
+// CPT HOME BLOCKS
+
+function create_home_blocks_cpt() {
+    $labels = array(
+        'name' => _x('Home Blocks', 'Post Type General Name', 'textdomain'),
+        'singular_name' => _x('Home Block', 'Post Type Singular Name', 'textdomain'),
+        'menu_name' => _x('Home Blocks', 'Admin Menu text', 'textdomain'),
+        'name_admin_bar' => _x('Home Block', 'Add New on Toolbar', 'textdomain'),
+        'archives' => __('Home Block Archives', 'textdomain'),
+        'attributes' => __('Home Block Attributes', 'textdomain'),
+        'parent_item_colon' => __('Parent Home Block:', 'textdomain'),
+        'all_items' => __('All Home Blocks', 'textdomain'),
+        'add_new_item' => __('Add New Home Block', 'textdomain'),
+        'add_new' => __('Add New', 'textdomain'),
+        'new_item' => __('New Home Block', 'textdomain'),
+        'edit_item' => __('Edit Home Block', 'textdomain'),
+        'update_item' => __('Update Home Block', 'textdomain'),
+        'view_item' => __('View Home Block', 'textdomain'),
+        'view_items' => __('View Home Blocks', 'textdomain'),
+        'search_items' => __('Search Home Block', 'textdomain'),
+        'not_found' => __('Not found', 'textdomain'),
+        'not_found_in_trash' => __('Not found in Trash', 'textdomain'),
+        'featured_image' => __('Featured Image', 'textdomain'),
+        'set_featured_image' => __('Set featured image', 'textdomain'),
+        'remove_featured_image' => __('Remove featured image', 'textdomain'),
+        'use_featured_image' => __('Use as featured image', 'textdomain'),
+        'insert_into_item' => __('Insert into Home Block', 'textdomain'),
+        'uploaded_to_this_item' => __('Uploaded to this Home Block', 'textdomain'),
+        'items_list' => __('Home Blocks list', 'textdomain'),
+        'items_list_navigation' => __('Home Blocks list navigation', 'textdomain'),
+        'filter_items_list' => __('Filter Home Blocks list', 'textdomain'),
+    );
+    $args = array(
+        'label' => __('Home Block', 'textdomain'),
+        'description' => __('Custom post type for home page blocks', 'textdomain'),
+        'labels' => $labels,
+        'supports' => array('title', 'editor', 'thumbnail', 'revisions'),
+        'taxonomies' => array(),
+        'hierarchical' => true,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 5,
+        'menu_icon' => 'dashicons-admin-home',
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        'can_export' => true,
+        'has_archive' => true,
+        'exclude_from_search' => false,
+        'publicly_queryable' => true,
+        'capability_type' => 'post',
+        'show_in_rest' => true, // Enable the Gutenberg editor
+    );
+    register_post_type('home_block', $args);
+}
+
+add_action('init', 'create_home_blocks_cpt', 0);

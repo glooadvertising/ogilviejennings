@@ -1,11 +1,27 @@
-<section class="proud-history" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/docks.jpg');">
+<?php 
+    $args = array(
+        'post_type' => 'home_block',
+        'pagename'=> 'home-block-4',
+    );
+
+    $proudHistory = new WP_Query( $args );
+
+?>
+
+<?php while ( $proudHistory->have_posts() ) : $proudHistory->the_post(); ?>           
+            
+<section class="proud-history" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');">
     <div class="container">
         <div class="translucid-box">
             <div class="text-container">
-                <h2>Proud history</h2>
-                <p>Ogilvie Jennings is a well-established Tasmanian law firm. We are proud of our heritage, and excited about our future.</p>
+                <h2><?php the_title(); ?></h2>
+                <?php the_content(); ?>
             </div>
-            <a href="<?php echo get_site_url();?>/about-us" class="btn">About us</a>
+            <a href="<?php echo get_field('link_url');?>" class="btn">About us</a>
         </div>
     </div>
 </section>
+<?php endwhile; ?>
+<?php wp_reset_postdata(); ?>
+
+

@@ -192,7 +192,7 @@
     </section>
 <?php }?>
 
-<?php is_page( 'contact-us' ) ? get_template_part('partials/contact') : null; ?>
+<?php do_shortcode( '[cwpai_contact_form]' ); ?>
 
 <!--?php get_template_part('partials/mobile-submenu'); ?-->
 <?php is_child(11) ? mobile_submenu('See more practice areas', 'practice-areas'): null; ?>

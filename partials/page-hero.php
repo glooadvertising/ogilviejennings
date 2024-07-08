@@ -2,7 +2,7 @@
     <div class="container">
     </div>
 </section>
-<section class="page-hero-mobile" style="background-image: url('<?php echo  the_field('mobile_hero'); ?>');">
+<section class="page-hero-mobile" style="background-image: url('<?php echo the_field('mobile_hero'); ?>');">
     <div class="container">
     </div>
 </section>

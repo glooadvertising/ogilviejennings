@@ -1,14 +1,28 @@
-<section class="home-hero" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/hero.jpg');">
-    <div class="container">
-        <div class="box-one">
-            <div class="box-container">
-                <div class="text-group">
-                    <h1>Your trusted advisors</h1>
-                    <p>Ogilvie Jennings are a well-established full-service Tasmanian law firm for private individuals through to large companies.</p>
+<?php 
+    $args = array(
+        'post_type' => 'home_block',
+        'pagename'=> 'home-block-1',
+    );
+
+    $homeHero = new WP_Query( $args );
+
+?>
+
+<?php while ( $homeHero->have_posts() ) : $homeHero->the_post(); ?>           
+            
+    <section class="home-hero" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');">
+        <div class="container">
+            <div class="box-one">
+                <div class="box-container">
+                    <div class="text-group">
+                        <h1><?php the_title(); ?></h1>
+                        <?php the_content(); ?>
+                    </div>
+                    <a href="<?php echo get_field('link_url');?>" class="btn">Talk to us</a>
                 </div>
-                <a href="<?php echo get_site_url(); ?>/contact-us" class="btn">Talk to us</a>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
+            
+<?php endwhile; ?>
+<?php wp_reset_postdata(); ?>
