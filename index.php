@@ -30,7 +30,11 @@
                 <?php wp_reset_postdata(); ?>
             <?php } ?>
 
+            
         </div>
+        <?php if(is_page('contact-us')) {?>
+            <?php get_template_part( 'partials/contact' ); ?>
+        <?php }?>
     </section>
 <?php } ?>
 <?php if(is_page('our-lawyers') || is_child(11)) { ?>
