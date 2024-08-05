@@ -1,3 +1,15 @@
+<?php 
+    $args = array(
+        'post_type' => 'home_block',
+        'pagename'=> 'home-block-3',
+    );
+
+    $startedOnline = new WP_Query( $args );
+
+?>
+
+<?php while ( $startedOnline->have_posts() ) : $startedOnline->the_post(); ?>           
+            
 <section class="get-started-online">
     <div class="container">
         <div class="text-container">
@@ -5,7 +17,7 @@
             <?php the_content(); ?>
         </div>
         <div class="cards-container">
-            <a href="" target="_blank">
+            <a href="<?php echo get_field('external_link');?>" target="_blank">
                 <div class="card">
                     <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Family" class="icon">
                     <h3>Family Law</h3>
@@ -16,3 +28,9 @@
 
     </div>
 </section>
+
+<?php endwhile; ?>
+<?php wp_reset_postdata(); ?>
+
+
+
