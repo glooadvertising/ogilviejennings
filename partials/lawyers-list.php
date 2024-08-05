@@ -102,7 +102,7 @@
         $lawyers = new WP_Query( $args );
     ?>
     <details>
-        <summary>Laywers</summary>
+        <summary>Lawyers</summary>
         <ul>
             <?php while ( $lawyers->have_posts() ) : $lawyers->the_post(); ?>
             <li><a href="#<?php echo basename(get_permalink()); ?>"><?php the_title(); ?></a></li>
