@@ -975,6 +975,7 @@ a {
 
 .get-started-online {
   display: flex;
+  background-color: #f6f6f6;
   flex-direction: row;
   align-items: center;
   justify-content: center;

@@ -1,4 +1,4 @@
-<section class="page-hero" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');">
+<section class="page-hero" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?> <?php echo is_child(13) ? 'filter: blur(10px);' : null; ?>');">
     <div class="container">
     </div>
 </section>
