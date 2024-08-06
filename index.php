@@ -37,6 +37,7 @@
 <?php if (is_page('our-lawyers') || is_child(11)) { ?>
     <section class="page-content-cols">
         <div class="container">
+
             <div class="left-col">
                 <?php the_content(); ?>
 
@@ -183,7 +184,8 @@
 
             </div>
             <div class="right-col">
-                <?php is_page('our-lawyers') ? get_template_part('partials/lawyers-list') : null; ?>
+
+                <?php is_page('our-lawyers') ? get_template_part('partials/lawyers-dynamic-list') : null; ?>
                 <?php if (is_child(11)) {
                     echo "<h3>See other practice areas</h3>";
                 } ?>
